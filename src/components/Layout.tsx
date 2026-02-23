@@ -13,6 +13,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div className="relative min-h-screen">
+      <div className="top-light" />
       <ParticlesBackground />
       <Navbar />
       <main className="relative z-10">{children}</main>
