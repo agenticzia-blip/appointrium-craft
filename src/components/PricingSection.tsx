@@ -80,7 +80,7 @@ const PricingSection = () => (
                   Recommended
                 </div>
               )}
-              <plan.icon className="w-8 h-8 mb-4 opacity-70" />
+              <plan.icon className="w-10 h-10 mb-5 opacity-50" strokeWidth={1.5} />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
               <div className="mb-6">
                 <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
