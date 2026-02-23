@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-import { CheckCircle, Crown } from "lucide-react";
+import { CheckCircle, Crown, Zap, Gem, Rocket } from "lucide-react";
 
 const plans = [
   {
     name: "Starter",
     price: "4,000",
+    icon: Zap,
     recommended: false,
     features: [
       "N8N Masterclass",
@@ -19,6 +20,7 @@ const plans = [
   {
     name: "Professional",
     price: "10,000",
+    icon: Crown,
     recommended: true,
     features: [
       "Everything in Starter",
@@ -34,6 +36,7 @@ const plans = [
   {
     name: "Elite",
     price: "20,000",
+    icon: Gem,
     recommended: false,
     features: [
       "Everything in Professional",
@@ -68,7 +71,7 @@ const PricingSection = () => (
           <ScrollReveal key={plan.name} delay={i * 120}>
             <div
               className={`glass rounded-2xl p-8 text-left relative h-full flex flex-col ${
-                plan.recommended ? "glow-strong border border-foreground/20" : "border border-border"
+                plan.recommended ? "border border-foreground/20" : "border border-border"
               }`}
             >
               {plan.recommended && (
@@ -77,6 +80,7 @@ const PricingSection = () => (
                   Recommended
                 </div>
               )}
+              <plan.icon className="w-8 h-8 mb-4 opacity-70" />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
               <div className="mb-6">
                 <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
