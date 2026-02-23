@@ -9,7 +9,7 @@ const ParticlesBackground = () => {
         left: Math.random() * 100,
         top: Math.random() * 100,
         delay: Math.random() * 15,
-        duration: Math.random() * 8 + 5,
+        duration: Math.random() * 20 + 15,
         opacity: Math.random() * 0.35 + 0.1,
       })),
     []
