@@ -74,8 +74,8 @@ const Index = () => {
       <section className="section-padding">
         <div className="container-narrow text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">What You Learn About Master AI Automation
-              <span className="serif-italic text-gradient">Master AI Automation</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              What You Learn About <span className="serif-italic text-gradient">AI Automation?</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-12">
               From zero to client-ready. Real skills, real systems, real income.
