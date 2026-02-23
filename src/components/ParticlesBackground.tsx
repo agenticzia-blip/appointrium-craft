@@ -1,0 +1,39 @@
+import { useMemo } from "react";
+
+const ParticlesBackground = () => {
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 60 }, (_, i) => ({
+        id: i,
+        size: Math.random() * 2.5 + 0.5,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        delay: Math.random() * 8,
+        duration: Math.random() * 12 + 8,
+        opacity: Math.random() * 0.4 + 0.1,
+      })),
+    []
+  );
+
+  return (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          className="absolute rounded-full bg-foreground animate-float"
+          style={{
+            width: p.size + "px",
+            height: p.size + "px",
+            left: p.left + "%",
+            top: p.top + "%",
+            animationDelay: p.delay + "s",
+            animationDuration: p.duration + "s",
+            opacity: p.opacity,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default ParticlesBackground;
