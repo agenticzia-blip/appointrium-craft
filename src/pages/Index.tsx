@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlassCard from "@/components/GlassCard";
+import WhatIsAIAutomationSection from "@/components/WhatIsAIAutomationSection";
 import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket, ArrowRight } from "lucide-react";
 import {
   Accordion,
@@ -96,6 +97,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* What is AI Automation */}
+      <WhatIsAIAutomationSection />
 
       {/* FAQs */}
       <section className="section-padding">
