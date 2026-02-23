@@ -18,7 +18,7 @@ const steps = [
 
 const GetFirstClient = () => (
   <div>
-    <PageHero title="Get Your" highlight="First Client" subtitle="A complete system to find, pitch, and close your first AI automation client in 60 days or less." />
+    <PageHero title="Get Your" highlight="First Client" subtitle="A complete system to find, pitch, and close your first AI automation client in 90 days or less." />
     <section className="section-padding pt-8">
       <div className="container-narrow">
         <ScrollReveal>
@@ -37,7 +37,7 @@ const GetFirstClient = () => (
         <ScrollReveal delay={150}>
           <div className="glass-strong rounded-2xl p-8 text-center glow">
             <p className="text-xl font-display font-semibold mb-2">Our Guarantee</p>
-            <p className="text-muted-foreground">Get your first AI automation client in 60 days or you don't pay.</p>
+            <p className="text-muted-foreground">Get your first AI automation client in 90 days or you don't pay.</p>
           </div>
         </ScrollReveal>
         <ScrollReveal delay={250}>

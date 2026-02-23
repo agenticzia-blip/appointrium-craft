@@ -103,7 +103,7 @@ const Pricing = () => (
           <div className="glass-strong rounded-2xl p-8 mt-12 glow max-w-2xl mx-auto text-center">
             <p className="text-xl font-display font-semibold mb-2">Our Bold Promise</p>
             <p className="text-muted-foreground">
-              Get your first AI automation client in 60 days or you don't pay.
+              Get your first AI automation client in 90 days or you don't pay.
             </p>
           </div>
         </ScrollReveal>
