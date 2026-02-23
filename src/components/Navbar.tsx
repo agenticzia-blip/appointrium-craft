@@ -46,7 +46,7 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 border-b border-border">
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
         <Link to="/" className="font-display font-bold text-lg tracking-tight text-foreground">
           Appointrium<span className="text-muted-foreground font-normal ml-1">Academy</span>
@@ -116,7 +116,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden glass-strong border-t border-border animate-fade-in">
+        <div className="md:hidden bg-background border-t border-border animate-fade-in">
           <div className="flex flex-col p-6 gap-4">
             {navLinks.map((l) =>
               l.dropdown ? (
