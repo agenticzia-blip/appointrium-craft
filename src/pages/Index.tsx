@@ -21,11 +21,11 @@ const courses = [
 
 const faqs = [
   { q: "Do I need coding experience?", a: "No. Our courses are designed for complete beginners. We teach you everything from scratch using no-code and low-code tools like N8N." },
-  { q: "How long does it take to get results?", a: "Most students land their first client within 30–60 days. Our bold promise guarantees it — or you don't pay." },
+  { q: "How long does it take to get results?", a: "Most students land their first client within 30–90 days. Our bold promise guarantees it — or you don't pay." },
   { q: "What tools will I learn?", a: "N8N, AI agents, voice calling systems, WhatsApp automation, GoHighLevel, and complete funnel-building systems." },
   { q: "Is this a SaaS product?", a: "No. Appointrium Academy is a course-based program. You learn real skills, build real systems, and get real clients." },
   { q: "Can I access courses on mobile?", a: "Yes. All course content is accessible on any device, anytime." },
-  { q: "What is the refund policy?", a: "Get your first AI automation client in 60 days or you don't pay. That's our bold promise." },
+  { q: "What is the refund policy?", a: "Get your first AI automation client in 90 days or you don't pay. That's our bold promise." },
 ];
 
 const Index = () => {
@@ -134,7 +134,7 @@ const Index = () => {
                 Our <span className="serif-italic text-gradient">Bold Promise</span>
               </h2>
               <p className="text-xl md:text-2xl font-display font-semibold mb-4">
-                Get your first AI automation client in 60 days or you don't pay.
+                Get your first AI automation client in 90 days or you don't pay.
               </p>
               <p className="text-muted-foreground max-w-lg mx-auto mb-2">
                 We're so confident in this program that we put our money where our mouth is.
