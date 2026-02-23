@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoCombined from "@/assets/logo-combined.png";
+import logo from "@/assets/logo.png";
 
 const courseLinks = [
   { label: "n8n Full Course", path: "/n8n-course" },
@@ -50,8 +50,9 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 border-b border-border">
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
-        <Link to="/" className="flex items-center">
-          <img src={logoCombined} alt="Appointruim" className="h-10 w-auto object-contain" />
+        <Link to="/" className="flex items-center gap-1">
+          <img src={logo} alt="Appointruim" className="h-16 w-auto object-contain" />
+          <span className="font-['Poppins'] font-bold text-lg text-foreground tracking-tight mt-0.5">Appointruim.</span>
         </Link>
 
         {/* Desktop */}
