@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlassCard from "@/components/GlassCard";
 import WhatIsAIAutomationSection from "@/components/WhatIsAIAutomationSection";
+import PricingSection from "@/components/PricingSection";
 import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket, ArrowRight } from "lucide-react";
 import {
   Accordion,
@@ -100,6 +101,9 @@ const Index = () => {
 
       {/* What is AI Automation */}
       <WhatIsAIAutomationSection />
+
+      {/* Pricing */}
+      <PricingSection />
 
       {/* FAQs */}
       <section className="section-padding">
