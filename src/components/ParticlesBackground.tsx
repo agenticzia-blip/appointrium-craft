@@ -5,11 +5,11 @@ const ParticlesBackground = () => {
     () =>
       Array.from({ length: 80 }, (_, i) => ({
         id: i,
-        size: Math.random() * 1.5 + 0.8,
+        size: Math.random() * 2 + 1.2,
         left: Math.random() * 100,
         top: Math.random() * 100,
-        delay: Math.random() * 8,
-        duration: Math.random() * 12 + 8,
+        delay: Math.random() * 15,
+        duration: Math.random() * 15 + 10,
         opacity: Math.random() * 0.35 + 0.1,
       })),
     []
