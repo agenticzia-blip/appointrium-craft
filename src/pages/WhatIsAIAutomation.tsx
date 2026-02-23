@@ -115,7 +115,7 @@ const WhatIsAIAutomation = () => (
         <ScrollReveal>
           <div className="glass-strong rounded-2xl p-10 md:p-16 glow">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Ready to <span className="serif-italic text-gradient">Learn This?</span>
+              Ready to <span className="serif-italic text-gradient">Learn This</span>?
             </h2>
             <p className="text-muted-foreground max-w-lg mx-auto mb-8">
               We teach you how to build, sell, and deliver AI automation systems — from scratch.
