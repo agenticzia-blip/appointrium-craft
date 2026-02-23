@@ -43,7 +43,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.2] mb-6">
               Learn AI Agents.<br />
               <span className="serif-italic text-gradient">Automate Businesses.</span><br />
               Get Paid.
