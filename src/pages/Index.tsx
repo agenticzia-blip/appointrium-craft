@@ -8,7 +8,7 @@ import AIAgentsVsAutomationSection from "@/components/AIAgentsVsAutomationSectio
 import WhatIsRAGAgentSection from "@/components/WhatIsRAGAgentSection";
 import RAGvsSimpleChatbotSection from "@/components/RAGvsSimpleChatbotSection";
 import PricingSection from "@/components/PricingSection";
-import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket, ArrowRight } from "lucide-react";
+import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Handshake, Rocket, ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -21,7 +21,7 @@ const courses = [
 { icon: Bot, title: "AI Agents Course", desc: "Solution-based AI agents for real-world businesses.", path: "/ai-agents-course" },
 { icon: Phone, title: "Voice Agents Program", desc: "Build AI receptionists, cold callers & more.", path: "/voice-agents" },
 { icon: MessageSquare, title: "WhatsApp Automation", desc: "Automate client communication at scale.", path: "/whatsapp-automation" },
-{ icon: Target, title: "Get Your First Client", desc: "Full cold emailing engine & outreach systems.", path: "/get-first-client" },
+{ icon: Handshake, title: "Get Your First Client", desc: "Full cold emailing engine & outreach systems.", path: "/get-first-client" },
 { icon: Rocket, title: "Appoint Funnels System", desc: "Funnels & outreach that convert.", path: "/appoint-funnels" }];
 
 
