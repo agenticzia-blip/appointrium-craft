@@ -54,10 +54,10 @@ const Index = () => {
           </ScrollReveal>
           <ScrollReveal delay={300}>
             <div className="flex flex-col gap-3 max-w-sm mx-auto">
-              <Button asChild variant="hero" size="lg" className="w-full justify-center gap-3">
+              <Button asChild variant="hero-outline" size="lg" className="w-full justify-center gap-3 rounded-full h-12 text-base">
                 <Link to="/courses">Explore Courses <ArrowRight className="w-4 h-4" /></Link>
               </Button>
-              <Button asChild variant="hero-outline" size="lg" className="w-full justify-center">
+              <Button asChild variant="hero-outline" size="lg" className="w-full justify-center rounded-full h-12 text-base">
                 <Link to="/get-first-client">Get Your First Client</Link>
               </Button>
             </div>
