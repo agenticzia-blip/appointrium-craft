@@ -32,9 +32,7 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="section-padding pt-28 pb-20 min-h-[90vh] flex items-center relative overflow-x-clip">
-        {/* Subtle earth curve line */}
-        <div className="absolute top-[100px] left-1/2 -translate-x-1/2 w-[200%] h-[800px] rounded-[50%] border-t border-foreground/[0.08]" />
+      <section className="section-padding pt-28 pb-20 min-h-[90vh] flex items-center relative">
         <div className="container-narrow text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8">
