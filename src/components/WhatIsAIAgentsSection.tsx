@@ -23,7 +23,7 @@ const WhatIsAIAgentsSection = () => (
       <div className="container-narrow">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4">
-            What are <span className="serif-italic text-gradient">AI Agents</span>?
+            What are <span className="serif-italic text-gradient">AI Agents?</span>
           </h2>
           <p className="text-muted-foreground text-center max-w-xl mx-auto mb-12">
             AI Agents are autonomous systems that think, plan, and act — going far beyond simple automation.

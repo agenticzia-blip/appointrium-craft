@@ -24,7 +24,7 @@ const WhatIsRAGAgentSection = () => (
       <div className="container-narrow">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4">
-            What is a <span className="serif-italic text-gradient">RAG Agent</span>?
+            What is a <span className="serif-italic text-gradient">RAG Agent?</span>
           </h2>
           <p className="text-muted-foreground text-center max-w-xl mx-auto mb-12">
             RAG (Retrieval-Augmented Generation) is the secret behind AI that actually knows your business.

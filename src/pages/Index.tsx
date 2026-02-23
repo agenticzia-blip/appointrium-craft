@@ -47,7 +47,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.3] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.2] mb-6">
               Learn AI Agents.<br />
               <span className="serif-italic text-gradient">Automate Businesses.</span><br />
               Get Paid.
@@ -81,7 +81,7 @@ const Index = () => {
         <div className="container-narrow text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              What You Learn About <span className="serif-italic text-gradient">AI Automation</span>?
+              What You Learn About <span className="serif-italic text-gradient">AI Automation?</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-12">
               From zero to client-ready. Real skills, real systems, real income.
@@ -176,7 +176,7 @@ const Index = () => {
         <div className="container-narrow">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Ready to <span className="serif-italic text-gradient">Start</span>?
+              Ready to <span className="serif-italic text-gradient">Start?</span>
             </h2>
             <p className="text-muted-foreground max-w-lg mx-auto mb-8">
               Join hundreds of students building real AI businesses. Your journey starts now.
