@@ -19,6 +19,7 @@ import AppointFunnels from "./pages/AppointFunnels";
 import Tools from "./pages/Tools";
 import Results from "./pages/Results";
 import Pricing from "./pages/Pricing";
+import WhatIsAIAutomation from "./pages/WhatIsAIAutomation";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/tools" element={<Tools />} />
             <Route path="/results" element={<Results />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/what-is-ai-automation" element={<WhatIsAIAutomation />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
