@@ -99,11 +99,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What is AI Automation */}
-      <WhatIsAIAutomationSection />
-
       {/* Pricing */}
       <PricingSection />
+
+      {/* What is AI Automation */}
+      <WhatIsAIAutomationSection />
 
       {/* FAQs */}
       <section className="section-padding">
