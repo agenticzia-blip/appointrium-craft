@@ -88,9 +88,7 @@ const Index = () => {
             <ScrollReveal key={c.title} delay={i * 100}>
                 <Link to={c.path}>
                   <GlassCard className="text-center h-full">
-                    <div className="w-12 h-12 mx-auto mb-4 rounded-full border border-border flex items-center justify-center">
-                      <c.icon className="w-5 h-5 text-foreground opacity-80" strokeWidth={1.5} />
-                    </div>
+                    <c.icon className="w-10 h-10 mx-auto mb-4 text-foreground opacity-80" strokeWidth={1.5} />
                     <h3 className="font-display font-semibold text-lg mb-2">{c.title}</h3>
                     <p className="text-sm text-muted-foreground">{c.desc}</p>
                   </GlassCard>
