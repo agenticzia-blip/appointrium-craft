@@ -53,7 +53,7 @@ const Index = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mx-auto">
+            <div className="flex flex-row gap-3 justify-center mx-auto">
               <Button asChild variant="hero-outline" size="default" className="justify-center gap-2 rounded-full h-11 px-7 text-sm">
                 <Link to="/courses">Explore Courses <ArrowRight className="w-4 h-4" /></Link>
               </Button>
