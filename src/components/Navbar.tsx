@@ -17,6 +17,7 @@ const navLinks = [
   { label: "Courses", path: "/courses", dropdown: true },
   { label: "Results", path: "/results" },
   { label: "Pricing", path: "/pricing" },
+  { label: "Privacy Policy", path: "/privacy-policy" },
   { label: "Contact", path: "/contact" },
 ];
 
