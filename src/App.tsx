@@ -21,6 +21,7 @@ import Results from "./pages/Results";
 import Pricing from "./pages/Pricing";
 import WhatIsAIAutomation from "./pages/WhatIsAIAutomation";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +51,7 @@ const App = () => (
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/what-is-ai-automation" element={<WhatIsAIAutomation />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
