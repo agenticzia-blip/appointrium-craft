@@ -51,7 +51,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 border-b border-border">
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Appointrium Academy" className="h-36" />
+          <img src={logo} alt="Appointrium Academy" className="h-14 w-auto object-contain" />
           {/* <span className="font-display font-bold text-lg tracking-tight text-foreground">Appointrium<span className="text-muted-foreground font-normal ml-1">Academy</span></span> */}
         </Link>
 
