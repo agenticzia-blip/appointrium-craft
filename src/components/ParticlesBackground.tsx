@@ -3,7 +3,7 @@ import { useMemo } from "react";
 const ParticlesBackground = () => {
   const particles = useMemo(
     () =>
-      Array.from({ length: 80 }, (_, i) => ({
+      Array.from({ length: 30 }, (_, i) => ({
         id: i,
         size: Math.random() * 2 + 1.2,
         left: Math.random() * 100,
@@ -11,6 +11,7 @@ const ParticlesBackground = () => {
         delay: Math.random() * 15,
         duration: Math.random() * 30 + 30,
         opacity: Math.random() * 0.05 + 0.02,
+        color: i % 2 === 0 ? "hsl(0 0% 53%)" : "hsl(0 0% 100%)",
       })),
     []
   );
@@ -20,7 +21,7 @@ const ParticlesBackground = () => {
       {particles.map((p) => (
         <div
           key={p.id}
-          className="absolute rounded-full bg-foreground animate-float"
+          className="absolute rounded-full animate-float"
           style={{
             width: p.size + "px",
             height: p.size + "px",
@@ -29,6 +30,7 @@ const ParticlesBackground = () => {
             animationDelay: p.delay + "s",
             animationDuration: p.duration + "s",
             opacity: p.opacity,
+            backgroundColor: p.color,
           }}
         />
       ))}
