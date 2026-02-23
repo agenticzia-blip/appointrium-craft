@@ -81,7 +81,7 @@ const Index = () => {
         <div className="container-narrow text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              What You Learn About <span className="serif-italic text-gradient">AI Automation?</span>
+              What You Learn About <span className="serif-italic text-gradient">AI Automation</span>?
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-12">
               From zero to client-ready. Real skills, real systems, real income.
@@ -176,7 +176,7 @@ const Index = () => {
         <div className="container-narrow">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Ready to <span className="serif-italic text-gradient">Start?</span>
+              Ready to <span className="serif-italic text-gradient">Start</span>?
             </h2>
             <p className="text-muted-foreground max-w-lg mx-auto mb-8">
               Join hundreds of students building real AI businesses. Your journey starts now.
