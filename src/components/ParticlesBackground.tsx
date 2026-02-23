@@ -3,14 +3,14 @@ import { useMemo } from "react";
 const ParticlesBackground = () => {
   const particles = useMemo(
     () =>
-      Array.from({ length: 30 }, (_, i) => ({
+      Array.from({ length: 80 }, (_, i) => ({
         id: i,
-        size: Math.random() * 4 + 2,
+        size: Math.random() * 1.5 + 0.8,
         left: Math.random() * 100,
         top: Math.random() * 100,
-        delay: Math.random() * 6,
-        duration: Math.random() * 10 + 6,
-        opacity: Math.random() * 0.45 + 0.2,
+        delay: Math.random() * 8,
+        duration: Math.random() * 12 + 8,
+        opacity: Math.random() * 0.35 + 0.1,
       })),
     []
   );
