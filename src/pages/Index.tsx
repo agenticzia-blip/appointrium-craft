@@ -5,6 +5,8 @@ import GlassCard from "@/components/GlassCard";
 import WhatIsAIAutomationSection from "@/components/WhatIsAIAutomationSection";
 import WhatIsAIAgentsSection from "@/components/WhatIsAIAgentsSection";
 import AIAgentsVsAutomationSection from "@/components/AIAgentsVsAutomationSection";
+import WhatIsRAGAgentSection from "@/components/WhatIsRAGAgentSection";
+import RAGvsSimpleChatbotSection from "@/components/RAGvsSimpleChatbotSection";
 import PricingSection from "@/components/PricingSection";
 import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket, ArrowRight } from "lucide-react";
 import {
@@ -112,6 +114,12 @@ const Index = () => {
 
       {/* AI Agents vs AI Automation */}
       <AIAgentsVsAutomationSection />
+
+      {/* What is RAG Agent */}
+      <WhatIsRAGAgentSection />
+
+      {/* RAG Agent vs Simple Chatbot */}
+      <RAGvsSimpleChatbotSection />
 
       {/* FAQs */}
       <section className="section-padding">
