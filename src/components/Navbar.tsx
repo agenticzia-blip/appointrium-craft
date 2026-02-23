@@ -52,7 +52,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Appointruim" className="h-14 w-auto object-contain" />
-          <span className="font-['Poppins'] font-bold text-xl text-foreground tracking-tight">Appointruim.</span>
+          <span className="font-['Poppins'] font-bold text-lg text-foreground tracking-tight">Appointruim.</span>
         </Link>
 
         {/* Desktop */}
