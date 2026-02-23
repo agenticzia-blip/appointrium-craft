@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlassCard from "@/components/GlassCard";
 import { Bot, Zap, Repeat, BrainCircuit, Workflow, CheckCircle } from "lucide-react";
@@ -99,6 +100,14 @@ const WhatIsAIAutomationSection = () => (
           ))}
         </div>
       </div>
+    </section>
+
+    <section className="section-padding pt-0 text-center">
+      <ScrollReveal>
+        <Button asChild variant="hero" size="lg" className="rounded-full">
+          <Link to="/pricing">Enroll Now</Link>
+        </Button>
+      </ScrollReveal>
     </section>
   </>
 );

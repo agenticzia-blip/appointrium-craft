@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlassCard from "@/components/GlassCard";
 import { Workflow, Bot, CheckCircle, X } from "lucide-react";
@@ -74,6 +76,14 @@ const AIAgentsVsAutomationSection = () => (
             AI Automation handles the repetitive work. AI Agents handle the thinking. Together, they're unstoppable — and we teach you both.
           </p>
         </GlassCard>
+      </ScrollReveal>
+    </div>
+
+    <div className="text-center mt-10">
+      <ScrollReveal>
+        <Button asChild variant="hero" size="lg" className="rounded-full">
+          <Link to="/pricing">Enroll Now</Link>
+        </Button>
       </ScrollReveal>
     </div>
   </section>
