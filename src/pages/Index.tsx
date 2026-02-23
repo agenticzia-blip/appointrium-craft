@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlassCard from "@/components/GlassCard";
 import WhatIsAIAutomationSection from "@/components/WhatIsAIAutomationSection";
+import WhatIsAIAgentsSection from "@/components/WhatIsAIAgentsSection";
+import AIAgentsVsAutomationSection from "@/components/AIAgentsVsAutomationSection";
 import PricingSection from "@/components/PricingSection";
 import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket, ArrowRight } from "lucide-react";
 import {
@@ -104,6 +106,12 @@ const Index = () => {
 
       {/* What is AI Automation */}
       <WhatIsAIAutomationSection />
+
+      {/* What is AI Agents */}
+      <WhatIsAIAgentsSection />
+
+      {/* AI Agents vs AI Automation */}
+      <AIAgentsVsAutomationSection />
 
       {/* FAQs */}
       <section className="section-padding">
