@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlassCard from "@/components/GlassCard";
-import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket } from "lucide-react";
+import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket, ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -32,36 +32,39 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="section-padding pt-32 pb-20 min-h-[90vh] flex items-center">
+      <section className="section-padding pt-28 pb-20 min-h-[90vh] flex items-center">
         <div className="container-narrow text-center">
           <ScrollReveal>
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6 font-display">Appointrium Academy</p>
+            <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8">
+              <span className="text-sm font-display font-medium text-foreground">90-Day Client Guarantee</span>
+              <span>⚡</span>
+            </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6">
-              Learn <span className="serif-italic text-gradient">AI Agents.</span><br />
-              Automate Businesses.<br />
+              Learn AI Agents.<br />
+              <span className="serif-italic text-gradient">Automate Businesses.</span><br />
               Get Paid.
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              A complete academy to master N8N, AI agents, voice agents & real client systems.
+            <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto mb-10">
+              A complete academy to master n8n, AI agents, voice agents & real client systems.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="hero" size="lg">
-                <Link to="/courses">Explore Courses</Link>
+            <div className="flex flex-col gap-3 max-w-sm mx-auto">
+              <Button asChild variant="hero" size="lg" className="w-full justify-center gap-3">
+                <Link to="/courses">Explore Courses <ArrowRight className="w-4 h-4" /></Link>
               </Button>
-              <Button asChild variant="hero-outline" size="lg">
+              <Button asChild variant="hero-outline" size="lg" className="w-full justify-center">
                 <Link to="/get-first-client">Get Your First Client</Link>
               </Button>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <p className="mt-8 text-sm text-muted-foreground">
-              "Get your first AI automation client in 60 days or you don't pay."
+            <p className="mt-10 text-xs uppercase tracking-[0.25em] text-muted-foreground font-display">
+              90-Day Results Guarantee or $0 Cost
             </p>
           </ScrollReveal>
         </div>
