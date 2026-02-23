@@ -1,12 +1,170 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import ScrollReveal from "@/components/ScrollReveal";
+import GlassCard from "@/components/GlassCard";
+import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Target, Rocket } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const courses = [
+  { icon: Zap, title: "N8N Masterclass", desc: "From beginner to advanced. Build real business automations.", path: "/n8n-course" },
+  { icon: Bot, title: "AI Agents Course", desc: "Solution-based AI agents for real-world businesses.", path: "/ai-agents-course" },
+  { icon: Phone, title: "Voice Agents Program", desc: "Build AI receptionists, cold callers & more.", path: "/voice-agents" },
+  { icon: MessageSquare, title: "WhatsApp Automation", desc: "Automate client communication at scale.", path: "/whatsapp-automation" },
+  { icon: Target, title: "Get Your First Client", desc: "Full cold emailing engine & outreach systems.", path: "/get-first-client" },
+  { icon: Rocket, title: "Appoint Funnels System", desc: "Funnels & outreach that convert.", path: "/appoint-funnels" },
+];
+
+const faqs = [
+  { q: "Do I need coding experience?", a: "No. Our courses are designed for complete beginners. We teach you everything from scratch using no-code and low-code tools like N8N." },
+  { q: "How long does it take to get results?", a: "Most students land their first client within 30–60 days. Our bold promise guarantees it — or you don't pay." },
+  { q: "What tools will I learn?", a: "N8N, AI agents, voice calling systems, WhatsApp automation, GoHighLevel, and complete funnel-building systems." },
+  { q: "Is this a SaaS product?", a: "No. Appointrium Academy is a course-based program. You learn real skills, build real systems, and get real clients." },
+  { q: "Can I access courses on mobile?", a: "Yes. All course content is accessible on any device, anytime." },
+  { q: "What is the refund policy?", a: "Get your first AI automation client in 60 days or you don't pay. That's our bold promise." },
+];
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div>
+      {/* Hero */}
+      <section className="section-padding pt-32 pb-20 min-h-[90vh] flex items-center">
+        <div className="container-narrow text-center">
+          <ScrollReveal>
+            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6 font-display">Appointrium Academy</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6">
+              Learn <span className="serif-italic text-gradient">AI Agents.</span><br />
+              Automate Businesses.<br />
+              Get Paid.
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+              A complete academy to master N8N, AI agents, voice agents & real client systems.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={300}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild variant="hero" size="lg">
+                <Link to="/courses">Explore Courses</Link>
+              </Button>
+              <Button asChild variant="hero-outline" size="lg">
+                <Link to="/get-first-client">Get Your First Client</Link>
+              </Button>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={400}>
+            <p className="mt-8 text-sm text-muted-foreground">
+              "Get your first AI automation client in 60 days or you don't pay."
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Everything You Need */}
+      <section className="section-padding">
+        <div className="container-narrow text-center">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              Everything You Need to <span className="serif-italic text-gradient">Master AI Automation</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto mb-12">
+              From zero to client-ready. Real skills, real systems, real income.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courses.map((c, i) => (
+              <ScrollReveal key={c.title} delay={i * 100}>
+                <Link to={c.path}>
+                  <GlassCard className="text-center h-full">
+                    <c.icon className="w-10 h-10 mx-auto mb-4 text-foreground opacity-80" />
+                    <h3 className="font-display font-semibold text-lg mb-2">{c.title}</h3>
+                    <p className="text-sm text-muted-foreground">{c.desc}</p>
+                  </GlassCard>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="section-padding">
+        <div className="container-narrow">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
+              Frequently Asked <span className="serif-italic text-gradient">Questions</span>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <div className="max-w-2xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-3">
+                {faqs.map((f, i) => (
+                  <AccordionItem key={i} value={`faq-${i}`} className="glass rounded-lg px-6 border-none">
+                    <AccordionTrigger className="text-left font-display font-medium text-sm hover:no-underline">
+                      {f.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-sm">
+                      {f.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Bold Promise */}
+      <section className="section-padding">
+        <div className="container-narrow text-center">
+          <ScrollReveal>
+            <div className="glass-strong rounded-2xl p-10 md:p-16 glow">
+              <BookOpen className="w-12 h-12 mx-auto mb-6 opacity-60" />
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Our <span className="serif-italic text-gradient">Bold Promise</span>
+              </h2>
+              <p className="text-xl md:text-2xl font-display font-semibold mb-4">
+                Get your first AI automation client in 60 days or you don't pay.
+              </p>
+              <p className="text-muted-foreground max-w-lg mx-auto mb-2">
+                We're so confident in this program that we put our money where our mouth is.
+              </p>
+              <p className="text-sm font-display font-semibold mt-4 text-foreground/80">
+                🔥 Limited-time Ramadan Offer
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="section-padding text-center">
+        <div className="container-narrow">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              Ready to <span className="serif-italic text-gradient">Start?</span>
+            </h2>
+            <p className="text-muted-foreground max-w-lg mx-auto mb-8">
+              Join hundreds of students building real AI businesses. Your journey starts now.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild variant="hero" size="lg">
+                <Link to="/pricing">Enroll Now</Link>
+              </Button>
+              <Button asChild variant="hero-outline" size="lg">
+                <Link to="/contact">Talk to Us</Link>
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
     </div>
   );
 };
