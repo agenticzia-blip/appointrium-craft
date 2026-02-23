@@ -7,26 +7,26 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  AccordionTrigger } from
+"@/components/ui/accordion";
 
 const courses = [
-  { icon: Zap, title: "N8N Masterclass", desc: "From beginner to advanced. Build real business automations.", path: "/n8n-course" },
-  { icon: Bot, title: "AI Agents Course", desc: "Solution-based AI agents for real-world businesses.", path: "/ai-agents-course" },
-  { icon: Phone, title: "Voice Agents Program", desc: "Build AI receptionists, cold callers & more.", path: "/voice-agents" },
-  { icon: MessageSquare, title: "WhatsApp Automation", desc: "Automate client communication at scale.", path: "/whatsapp-automation" },
-  { icon: Target, title: "Get Your First Client", desc: "Full cold emailing engine & outreach systems.", path: "/get-first-client" },
-  { icon: Rocket, title: "Appoint Funnels System", desc: "Funnels & outreach that convert.", path: "/appoint-funnels" },
-];
+{ icon: Zap, title: "N8N Masterclass", desc: "From beginner to advanced. Build real business automations.", path: "/n8n-course" },
+{ icon: Bot, title: "AI Agents Course", desc: "Solution-based AI agents for real-world businesses.", path: "/ai-agents-course" },
+{ icon: Phone, title: "Voice Agents Program", desc: "Build AI receptionists, cold callers & more.", path: "/voice-agents" },
+{ icon: MessageSquare, title: "WhatsApp Automation", desc: "Automate client communication at scale.", path: "/whatsapp-automation" },
+{ icon: Target, title: "Get Your First Client", desc: "Full cold emailing engine & outreach systems.", path: "/get-first-client" },
+{ icon: Rocket, title: "Appoint Funnels System", desc: "Funnels & outreach that convert.", path: "/appoint-funnels" }];
+
 
 const faqs = [
-  { q: "Do I need coding experience?", a: "No. Our courses are designed for complete beginners. We teach you everything from scratch using no-code and low-code tools like N8N." },
-  { q: "How long does it take to get results?", a: "Most students land their first client within 30–90 days. Our bold promise guarantees it — or you don't pay." },
-  { q: "What tools will I learn?", a: "N8N, AI agents, voice calling systems, WhatsApp automation, GoHighLevel, and complete funnel-building systems." },
-  { q: "Is this a SaaS product?", a: "No. Appointrium Academy is a course-based program. You learn real skills, build real systems, and get real clients." },
-  { q: "Can I access courses on mobile?", a: "Yes. All course content is accessible on any device, anytime." },
-  { q: "What is the refund policy?", a: "Get your first AI automation client in 90 days or you don't pay. That's our bold promise." },
-];
+{ q: "Do I need coding experience?", a: "No. Our courses are designed for complete beginners. We teach you everything from scratch using no-code and low-code tools like N8N." },
+{ q: "How long does it take to get results?", a: "Most students land their first client within 30–90 days. Our bold promise guarantees it — or you don't pay." },
+{ q: "What tools will I learn?", a: "N8N, AI agents, voice calling systems, WhatsApp automation, GoHighLevel, and complete funnel-building systems." },
+{ q: "Is this a SaaS product?", a: "No. Appointrium Academy is a course-based program. You learn real skills, build real systems, and get real clients." },
+{ q: "Can I access courses on mobile?", a: "Yes. All course content is accessible on any device, anytime." },
+{ q: "What is the refund policy?", a: "Get your first AI automation client in 90 days or you don't pay. That's our bold promise." }];
+
 
 const Index = () => {
   return (
@@ -36,7 +36,7 @@ const Index = () => {
         <div className="container-narrow text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8">
-              <span className="text-sm font-display font-medium text-foreground">90-Day Client Guarantee</span>
+              <span className="text-sm font-display font-medium text-foreground">90-Days Client Guarantee</span>
               <span>⚡</span>
             </div>
           </ScrollReveal>
@@ -48,8 +48,8 @@ const Index = () => {
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto mb-10">
-              A complete academy to master n8n, AI agents, voice agents & real client systems.
+            <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto mb-10">A complete academy to master n8n, AI agents, voice agents & how to sell them .
+
             </p>
           </ScrollReveal>
           <ScrollReveal delay={300}>
@@ -63,8 +63,8 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <p className="mt-10 text-xs uppercase tracking-[0.25em] text-muted-foreground font-display">
-              90-Day Results Guarantee or $0 Cost
+            <p className="mt-10 text-xs uppercase tracking-[0.25em] text-muted-foreground font-display">90-DAYS RESULTS GUARANTEE OR $0 COST
+
             </p>
           </ScrollReveal>
         </div>
@@ -82,8 +82,8 @@ const Index = () => {
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courses.map((c, i) => (
-              <ScrollReveal key={c.title} delay={i * 100}>
+            {courses.map((c, i) =>
+            <ScrollReveal key={c.title} delay={i * 100}>
                 <Link to={c.path}>
                   <GlassCard className="text-center h-full">
                     <c.icon className="w-10 h-10 mx-auto mb-4 text-foreground opacity-80" />
@@ -92,7 +92,7 @@ const Index = () => {
                   </GlassCard>
                 </Link>
               </ScrollReveal>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -108,8 +108,8 @@ const Index = () => {
           <ScrollReveal delay={100}>
             <div className="max-w-2xl mx-auto">
               <Accordion type="single" collapsible className="space-y-3">
-                {faqs.map((f, i) => (
-                  <AccordionItem key={i} value={`faq-${i}`} className="glass rounded-lg px-6 border-none">
+                {faqs.map((f, i) =>
+                <AccordionItem key={i} value={`faq-${i}`} className="glass rounded-lg px-6 border-none">
                     <AccordionTrigger className="text-left font-display font-medium text-sm hover:no-underline">
                       {f.q}
                     </AccordionTrigger>
@@ -117,7 +117,7 @@ const Index = () => {
                       {f.a}
                     </AccordionContent>
                   </AccordionItem>
-                ))}
+                )}
               </Accordion>
             </div>
           </ScrollReveal>
@@ -168,8 +168,8 @@ const Index = () => {
           </ScrollReveal>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
