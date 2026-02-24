@@ -7,6 +7,7 @@ const plans = [
   {
     name: "Starter",
     price: "3,000",
+    originalPrice: "4,000",
     icon: Zap,
     recommended: false,
     features: [
@@ -20,6 +21,7 @@ const plans = [
   {
     name: "Professional",
     price: "7,000",
+    originalPrice: "10,000",
     icon: Crown,
     recommended: true,
     features: [
@@ -36,6 +38,7 @@ const plans = [
   {
     name: "Elite",
     price: "12,000",
+    originalPrice: "20,000",
     icon: Gem,
     recommended: false,
     features: [
@@ -88,7 +91,9 @@ const PricingSection = () => (
               <plan.icon className="w-10 h-10 mb-5 opacity-50" strokeWidth={1.5} />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
               <div className="mb-6">
+                <p className="text-sm text-muted-foreground line-through mb-1">{plan.originalPrice} PKR</p>
                 <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
+                <span className="text-sm text-muted-foreground ml-2">one-time</span>
               </div>
               <div className="flex flex-col gap-3 mb-8 flex-1">
                 {plan.features.map((f, j) => (
