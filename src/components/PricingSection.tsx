@@ -12,10 +12,10 @@ const plans = [
     recommended: false,
     features: [
       "N8N Masterclass",
-      "MCP Live (5 Agents Build)",
       "Client Hunting Program",
       "Full Chat Support",
       "Basics of GoHighLevel",
+      "MCP Live (5 Agents Build)",
     ],
   },
   {
