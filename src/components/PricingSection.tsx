@@ -6,7 +6,7 @@ import { CheckCircle, Crown, Zap, Gem, Rocket } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "4,000",
+    price: "3,000",
     icon: Zap,
     recommended: false,
     features: [
@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "10,000",
+    price: "7,000",
     icon: Crown,
     recommended: true,
     features: [
@@ -35,7 +35,7 @@ const plans = [
   },
   {
     name: "Elite",
-    price: "20,000",
+    price: "12,000",
     icon: Gem,
     recommended: false,
     features: [
