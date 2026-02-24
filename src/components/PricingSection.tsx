@@ -16,6 +16,7 @@ const plans = [
       "Client Hunting Program",
       "Full Chat Support",
       "Basics of GoHighLevel",
+      "AI Chatbot Building",
     ],
   },
   {
