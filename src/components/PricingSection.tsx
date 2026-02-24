@@ -15,6 +15,7 @@ const plans = [
       "Client Hunting Program",
       "Full Chat Support",
       "Basics of GoHighLevel",
+      "AI Chatbot",
       "MCP Connections",
       "5 Live Agents Build",
     ],
