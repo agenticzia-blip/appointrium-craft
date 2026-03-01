@@ -94,8 +94,8 @@ const LandingPage = () => {
       {/* Enroll / Contact Form */}
       <section id="enroll-form" className="section-padding py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Left — Why Join */}
-          <div>
+          {/* Left — Why Join (appears second on mobile) */}
+          <div className="order-2 lg:order-1">
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
                 Ready to Start Your <span className="serif-italic text-gradient">Journey?</span>
@@ -128,8 +128,8 @@ const LandingPage = () => {
             </div>
           </div>
 
-          {/* Right — Form */}
-          <ScrollReveal delay={200}>
+          {/* Right — Form (appears first on mobile) */}
+          <ScrollReveal delay={200} className="order-1 lg:order-2">
             <GlassCard hover={false}>
               <h2 className="text-2xl font-display font-bold mb-6">Enroll Now</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
