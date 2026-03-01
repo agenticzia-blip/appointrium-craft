@@ -42,44 +42,41 @@ const LandingPage = () => {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="section-padding pt-32 pb-20 text-center">
-        <div className="container-narrow">
+      {/* Hero — same as homepage */}
+      <section className="section-padding pt-28 pb-20 min-h-[90vh] flex items-center relative">
+        <div className="container-narrow text-center">
           <ScrollReveal>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase mb-6">
-              Limited Spots Available
-            </span>
+            <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8">
+              <span className="text-sm font-display font-medium text-foreground">90-Days Client Guarantee</span>
+              <span>⚡</span>
+            </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold leading-tight mb-6">
-              Master AI Automation &<br />
-              <span className="serif-italic text-gradient">Get Paid</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.2] mb-6">
+              Learn AI Agents.<br />
+              <span className="serif-italic text-gradient">Automate Businesses.</span><br />
+              Get Paid.
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Join Pakistan's #1 AI automation academy. Build real systems, land real clients, and start earning — even with zero tech experience.
+            <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto mb-10">
+              A complete academy to master n8n, AI agents, voice agents & how to sell them.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              <Button asChild variant="hero" size="lg">
-                <a href="#enroll-form">Get Started Now <ArrowRight className="ml-2 w-4 h-4" /></a>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mx-auto w-full max-w-xs sm:max-w-none sm:w-auto">
+              <Button asChild variant="hero-outline" size="default" className="justify-center gap-2 rounded-full h-12 w-full sm:w-auto sm:h-11 px-7 text-sm">
+                <a href="#pricing-section">View Plans <ArrowRight className="w-4 h-4" /></a>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="#pricing-section">View Plans</a>
+              <Button asChild variant="hero-outline" size="default" className="justify-center rounded-full h-12 w-full sm:w-auto sm:h-11 px-7 text-sm">
+                <a href="#enroll-form">Enroll Now</a>
               </Button>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <div className="flex flex-wrap justify-center gap-4 mt-4">
-              {highlights.map((h) => (
-                <span key={h} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <CheckCircle className="w-4 h-4 text-primary shrink-0" />
-                  {h}
-                </span>
-              ))}
-            </div>
+            <p className="mt-10 text-xs uppercase tracking-[0.25em] text-muted-foreground font-display">
+              90-DAYS RESULTS GUARANTEE OR $0 COST
+            </p>
           </ScrollReveal>
         </div>
       </section>
