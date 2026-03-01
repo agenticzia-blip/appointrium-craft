@@ -82,7 +82,7 @@ const AIAgentsVsAutomationSection = () => (
     <div className="text-center mt-10">
       <ScrollReveal>
         <Button asChild variant="hero" size="lg" className="rounded-full">
-          <Link to="/pricing">Enroll Now</Link>
+          <Link to="/pricing">Apply Now</Link>
         </Button>
       </ScrollReveal>
     </div>

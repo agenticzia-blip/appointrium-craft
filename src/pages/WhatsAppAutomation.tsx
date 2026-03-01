@@ -102,7 +102,7 @@ const WhatsAppAutomation = () => (
                 ))}
               </div>
               <Button asChild variant="hero" size="lg" className="w-full">
-                <Link to="/pricing">Enroll Now →</Link>
+                <Link to="/pricing">Apply Now →</Link>
               </Button>
             </GlassCard>
           </ScrollReveal>

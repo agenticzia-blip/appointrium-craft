@@ -78,7 +78,7 @@ const LandingPage = () => {
                 <a href="#pricing-section">View Plans <ArrowRight className="w-4 h-4" /></a>
               </Button>
               <Button asChild variant="hero-outline" size="default" className="justify-center rounded-full h-12 w-full sm:w-auto sm:h-11 px-7 text-sm">
-                <a href="#enroll-form">Enroll Now</a>
+                <a href="#enroll-form">Apply Now</a>
               </Button>
             </div>
           </ScrollReveal>
@@ -131,7 +131,7 @@ const LandingPage = () => {
           {/* Right — Form (appears first on mobile) */}
           <ScrollReveal delay={200} className="order-1 lg:order-2">
             <GlassCard hover={false}>
-              <h2 className="text-2xl font-display font-bold mb-6">Enroll Now</h2>
+              <h2 className="text-2xl font-display font-bold mb-6">Apply Now</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <Label htmlFor="lp-name" className="text-sm font-medium mb-1.5 block">Name *</Label>

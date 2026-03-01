@@ -183,7 +183,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="hero" size="lg">
-                <Link to="/pricing">Enroll Now</Link>
+                <Link to="/pricing">Apply Now</Link>
               </Button>
               <Button asChild variant="hero-outline" size="lg">
                 <Link to="/contact">Talk to Us</Link>

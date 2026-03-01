@@ -67,7 +67,7 @@ const FormPage = () => {
           {/* Form — appears first on mobile */}
           <ScrollReveal className="order-1">
             <GlassCard hover={false}>
-              <h2 className="text-2xl font-display font-bold mb-6">Enroll Now</h2>
+              <h2 className="text-2xl font-display font-bold mb-6">Apply Now</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <Label htmlFor="fp-name" className="text-sm font-medium mb-1.5 block">Name *</Label>
