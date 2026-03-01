@@ -150,7 +150,7 @@ const LandingPage = () => {
                   <Textarea id="lp-message" name="message" placeholder="Any questions?" rows={3} value={form.message} onChange={handleChange} maxLength={500} />
                 </div>
                 <Button type="submit" variant="hero" size="lg" className="w-full" disabled={submitting}>
-                  {submitting ? "Sending..." : <>Submit & Enroll <Rocket className="ml-2 w-4 h-4" /></>}
+                  {submitting ? "Sending..." : <>Submit & Apply <Rocket className="ml-2 w-4 h-4" /></>}
                 </Button>
               </form>
             </GlassCard>
