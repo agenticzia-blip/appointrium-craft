@@ -19,16 +19,16 @@ const contactInfo = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "+92 320 5067483",
+    value: "+92 330 3120032",
     sub: "Fastest response",
-    href: "https://wa.me/923205067483",
+    href: "https://wa.me/923303120032",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+92 320 5067483",
+    value: "+92 330 3120032",
     sub: undefined,
-    href: "tel:+923205067483",
+    href: "tel:+923303120032",
   },
 ];
 
@@ -165,7 +165,7 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { icon: Mail, label: "Email Us", value: "appointfunnels@gmail.com" },
-            { icon: Phone, label: "Call Us", value: "+92 320 5067483" },
+            { icon: Phone, label: "Call Us", value: "+92 330 3120032" },
             { icon: MapPin, label: "Location", value: "We teach online" },
           ].map((item, i) => (
             <ScrollReveal key={item.label} delay={i * 80}>
