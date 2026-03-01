@@ -82,10 +82,6 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing */}
-      <div id="pricing-section">
-        <PricingSection />
-      </div>
-
       {/* Enroll / Contact Form */}
       <section id="enroll-form" className="section-padding py-20">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -152,6 +148,11 @@ const LandingPage = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Pricing */}
+      <div id="pricing-section">
+        <PricingSection />
+      </div>
     </div>
   );
 };
