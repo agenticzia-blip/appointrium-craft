@@ -37,7 +37,7 @@ const AppointFunnels = () => (
         <ScrollReveal delay={150}>
           <div className="text-center">
             <Button asChild variant="hero" size="lg">
-              <Link to="/pricing">Enroll Now</Link>
+              <Link to="/pricing">Apply Now</Link>
             </Button>
           </div>
         </ScrollReveal>

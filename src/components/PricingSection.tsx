@@ -106,7 +106,7 @@ const PricingSection = () => (
                 ))}
               </div>
               <Button asChild variant={plan.recommended ? "hero" : "hero-outline"} className="w-full">
-                <Link to="/contact">Enroll Now</Link>
+                <Link to="/contact">Apply Now</Link>
               </Button>
             </div>
           </ScrollReveal>

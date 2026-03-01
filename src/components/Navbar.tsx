@@ -108,7 +108,7 @@ const Navbar = () => {
             )
           )}
           <Button asChild variant="hero" size="sm">
-            <Link to="/pricing">Enroll Now</Link>
+            <Link to="/pricing">Apply Now</Link>
           </Button>
         </div>
 
@@ -169,7 +169,7 @@ const Navbar = () => {
               )
             )}
             <Button asChild variant="hero" size="sm" className="mt-2 w-fit">
-              <Link to="/pricing" onClick={() => setOpen(false)}>Enroll Now</Link>
+              <Link to="/pricing" onClick={() => setOpen(false)}>Apply Now</Link>
             </Button>
           </div>
         </div>

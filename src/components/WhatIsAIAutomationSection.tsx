@@ -105,7 +105,7 @@ const WhatIsAIAutomationSection = () => (
     <section className="section-padding pt-0 text-center">
       <ScrollReveal>
         <Button asChild variant="hero" size="lg" className="rounded-full">
-          <Link to="/pricing">Enroll Now</Link>
+          <Link to="/pricing">Apply Now</Link>
         </Button>
       </ScrollReveal>
     </section>
