@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlassCard from "@/components/GlassCard";
-import { Mail, Phone, MessageCircle, Clock } from "lucide-react";
+import { Mail, Phone, MessageCircle, Clock, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,7 +15,7 @@ const contactInfo = [
 ];
 
 const FormPage = () => {
-  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", subject: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,8 +24,8 @@ const FormPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast({ title: "Please fill in all required fields", variant: "destructive" });
+    if (!form.name.trim() || !form.email.trim()) {
+      toast({ title: "Please fill in your name and email", variant: "destructive" });
       return;
     }
     setSubmitting(true);
@@ -37,7 +37,7 @@ const FormPage = () => {
       });
       if (!res.ok) throw new Error("Failed");
       toast({ title: "Message sent successfully!" });
-      setForm({ name: "", email: "", whatsapp: "", subject: "", message: "" });
+      setForm({ name: "", email: "", whatsapp: "", message: "" });
     } catch {
       toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
     } finally {
@@ -52,22 +52,22 @@ const FormPage = () => {
         <div className="container-narrow">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4">
-              Send Us a <span className="serif-italic text-gradient">Message</span>
+              Ready to Start Your <span className="serif-italic text-gradient">Journey?</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              Have a question or ready to get started? Fill out the form and we'll get back to you shortly.
+              Fill out the form and our team will reach out to guide you to the perfect plan. No pressure, no spam — just real help.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Main Content — Form on top for mobile, contact info below */}
+      {/* Main Content — Form on top for mobile */}
       <section className="section-padding pt-8 pb-16">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Form — appears first on mobile */}
-          <ScrollReveal className="order-1 lg:order-1">
+          <ScrollReveal className="order-1">
             <GlassCard hover={false}>
-              <h2 className="text-2xl font-display font-bold mb-6">Get in Touch</h2>
+              <h2 className="text-2xl font-display font-bold mb-6">Enroll Now</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <Label htmlFor="fp-name" className="text-sm font-medium mb-1.5 block">Name *</Label>
@@ -82,22 +82,18 @@ const FormPage = () => {
                   <Input id="fp-whatsapp" name="whatsapp" placeholder="+92 300 1234567" value={form.whatsapp} onChange={handleChange} maxLength={20} />
                 </div>
                 <div>
-                  <Label htmlFor="fp-subject" className="text-sm font-medium mb-1.5 block">Subject</Label>
-                  <Input id="fp-subject" name="subject" placeholder="How can we help?" value={form.subject} onChange={handleChange} maxLength={200} />
-                </div>
-                <div>
-                  <Label htmlFor="fp-message" className="text-sm font-medium mb-1.5 block">Message *</Label>
-                  <Textarea id="fp-message" name="message" placeholder="Tell us more..." rows={4} value={form.message} onChange={handleChange} maxLength={1000} />
+                  <Label htmlFor="fp-message" className="text-sm font-medium mb-1.5 block">Message (optional)</Label>
+                  <Textarea id="fp-message" name="message" placeholder="Any questions or preferred plan?" rows={3} value={form.message} onChange={handleChange} maxLength={500} />
                 </div>
                 <Button type="submit" variant="hero" size="lg" className="w-full" disabled={submitting}>
-                  {submitting ? "Sending..." : "Send Message →"}
+                  {submitting ? "Sending..." : <>Submit & Enroll <Rocket className="ml-2 w-4 h-4" /></>}
                 </Button>
               </form>
             </GlassCard>
           </ScrollReveal>
 
           {/* Contact Info — appears second on mobile */}
-          <div className="order-2 lg:order-2">
+          <div className="order-2">
             <ScrollReveal>
               <h2 className="text-2xl font-display font-bold mb-6">Contact Information</h2>
             </ScrollReveal>
