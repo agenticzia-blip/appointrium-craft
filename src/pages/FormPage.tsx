@@ -9,9 +9,9 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: MessageCircle, title: "WhatsApp", value: "+92 320 5067483", sub: "Fastest response", href: "https://wa.me/923205067483" },
+  { icon: MessageCircle, title: "WhatsApp", value: "+92 330 3120032", sub: "Fastest response", href: "https://wa.me/923303120032" },
   { icon: Mail, title: "Email", value: "appointfunnels@gmail.com", href: "mailto:appointfunnels@gmail.com" },
-  { icon: Phone, title: "Phone", value: "+92 320 5067483", href: "tel:+923205067483" },
+  { icon: Phone, title: "Phone", value: "+92 330 3120032", href: "tel:+923303120032" },
 ];
 
 const FormPage = () => {

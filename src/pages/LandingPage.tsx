@@ -107,9 +107,9 @@ const LandingPage = () => {
 
             <div className="space-y-4">
               {[
-                { icon: MessageCircle, title: "WhatsApp", value: "+92 320 5067483", href: "https://wa.me/923205067483" },
+                { icon: MessageCircle, title: "WhatsApp", value: "+92 330 3120032", href: "https://wa.me/923303120032" },
                 { icon: Mail, title: "Email", value: "appointfunnels@gmail.com", href: "mailto:appointfunnels@gmail.com" },
-                { icon: Phone, title: "Phone", value: "+92 320 5067483", href: "tel:+923205067483" },
+                { icon: Phone, title: "Phone", value: "+92 330 3120032", href: "tel:+923303120032" },
               ].map((c, i) => (
                 <ScrollReveal key={c.title} delay={i * 80}>
                   <a href={c.href} target="_blank" rel="noopener noreferrer">
