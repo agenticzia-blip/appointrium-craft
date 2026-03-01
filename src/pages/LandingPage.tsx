@@ -34,7 +34,7 @@ const LandingPage = () => {
     }
     setSubmitting(true);
     try {
-      const res = await fetch("https://appointruim1.app.n8n.cloud/webhook/appointruim", {
+      const res = await fetch("https://appointruim1.app.n8n.cloud/webhook-test/appointruim", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, source: "landing" }),
