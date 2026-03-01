@@ -24,20 +24,29 @@ const LandingPage = () => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim()) {
       toast({ title: "Please fill in your name and email", variant: "destructive" });
       return;
     }
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}\n\n${form.message}`
-    );
-    window.open(
-      `mailto:appointfunnels@gmail.com?subject=${encodeURIComponent("Landing Page Inquiry")}&body=${body}`,
-      "_blank"
-    );
-    toast({ title: "Opening your email client..." });
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://appointruim1.app.n8n.cloud/webhook/appointruim", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, source: "landing" }),
+      });
+      if (!res.ok) throw new Error("Failed");
+      toast({ title: "Message sent successfully!" });
+      setForm({ name: "", email: "", whatsapp: "", message: "" });
+    } catch {
+      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -140,8 +149,8 @@ const LandingPage = () => {
                   <Label htmlFor="lp-message" className="text-sm font-medium mb-1.5 block">Message (optional)</Label>
                   <Textarea id="lp-message" name="message" placeholder="Any questions or preferred plan?" rows={3} value={form.message} onChange={handleChange} maxLength={500} />
                 </div>
-                <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Submit & Enroll <Rocket className="ml-2 w-4 h-4" />
+                <Button type="submit" variant="hero" size="lg" className="w-full" disabled={submitting}>
+                  {submitting ? "Sending..." : <>Submit & Enroll <Rocket className="ml-2 w-4 h-4" /></>}
                 </Button>
               </form>
             </GlassCard>

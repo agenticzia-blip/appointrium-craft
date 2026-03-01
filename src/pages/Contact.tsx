@@ -45,17 +45,29 @@ const Contact = () => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast({ title: "Please fill in all required fields", variant: "destructive" });
       return;
     }
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}\nSubject: ${form.subject}\n\n${form.message}`
-    );
-    window.open(`mailto:appointfunnels@gmail.com?subject=${encodeURIComponent(form.subject || "Contact Form")}&body=${body}`, "_blank");
-    toast({ title: "Opening your email client..." });
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://appointruim1.app.n8n.cloud/webhook/appointruim", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, source: "contact" }),
+      });
+      if (!res.ok) throw new Error("Failed");
+      toast({ title: "Message sent successfully!" });
+      setForm({ name: "", email: "", whatsapp: "", subject: "", message: "" });
+    } catch {
+      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -139,8 +151,8 @@ const Contact = () => {
                   <Label htmlFor="message" className="text-sm font-medium mb-1.5 block">Message</Label>
                   <Textarea id="message" name="message" placeholder="Tell us more..." rows={4} value={form.message} onChange={handleChange} maxLength={1000} />
                 </div>
-                <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Send Message →
+                <Button type="submit" variant="hero" size="lg" className="w-full" disabled={submitting}>
+                  {submitting ? "Sending..." : "Send Message →"}
                 </Button>
               </form>
             </GlassCard>
