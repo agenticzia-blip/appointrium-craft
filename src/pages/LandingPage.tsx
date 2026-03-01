@@ -18,7 +18,7 @@ const highlights = [
 ];
 
 const LandingPage = () => {
-  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", message: "" });
+  const [form, setForm] = useState({ name: "", whatsapp: "", pastSkills: "", message: "" });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -28,20 +28,20 @@ const LandingPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.email.trim()) {
-      toast({ title: "Please fill in your name and email", variant: "destructive" });
+    if (!form.name.trim() || !form.whatsapp.trim()) {
+      toast({ title: "Please fill in your name and WhatsApp number", variant: "destructive" });
       return;
     }
     setSubmitting(true);
     try {
-      const res = await fetch("https://appointruim1.app.n8n.cloud/webhook-test/appointruim", {
+      const res = await fetch("https://appointruim1.app.n8n.cloud/webhook/appointruim", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, source: "landing" }),
       });
       if (!res.ok) throw new Error("Failed");
       toast({ title: "Message sent successfully!" });
-      setForm({ name: "", email: "", whatsapp: "", message: "" });
+      setForm({ name: "", whatsapp: "", pastSkills: "", message: "" });
     } catch {
       toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
     } finally {
@@ -138,16 +138,16 @@ const LandingPage = () => {
                   <Input id="lp-name" name="name" placeholder="Your name" value={form.name} onChange={handleChange} maxLength={100} />
                 </div>
                 <div>
-                  <Label htmlFor="lp-email" className="text-sm font-medium mb-1.5 block">Email *</Label>
-                  <Input id="lp-email" name="email" type="email" placeholder="your@email.com" value={form.email} onChange={handleChange} maxLength={255} />
-                </div>
-                <div>
-                  <Label htmlFor="lp-whatsapp" className="text-sm font-medium mb-1.5 block">WhatsApp Number</Label>
+                  <Label htmlFor="lp-whatsapp" className="text-sm font-medium mb-1.5 block">WhatsApp Number *</Label>
                   <Input id="lp-whatsapp" name="whatsapp" placeholder="+92 300 1234567" value={form.whatsapp} onChange={handleChange} maxLength={20} />
                 </div>
                 <div>
+                  <Label htmlFor="lp-pastSkills" className="text-sm font-medium mb-1.5 block">Past Skills</Label>
+                  <Input id="lp-pastSkills" name="pastSkills" placeholder="e.g. Marketing, Sales, Web Development" value={form.pastSkills} onChange={handleChange} maxLength={200} />
+                </div>
+                <div>
                   <Label htmlFor="lp-message" className="text-sm font-medium mb-1.5 block">Message (optional)</Label>
-                  <Textarea id="lp-message" name="message" placeholder="Any questions or preferred plan?" rows={3} value={form.message} onChange={handleChange} maxLength={500} />
+                  <Textarea id="lp-message" name="message" placeholder="Any questions?" rows={3} value={form.message} onChange={handleChange} maxLength={500} />
                 </div>
                 <Button type="submit" variant="hero" size="lg" className="w-full" disabled={submitting}>
                   {submitting ? "Sending..." : <>Submit & Enroll <Rocket className="ml-2 w-4 h-4" /></>}
