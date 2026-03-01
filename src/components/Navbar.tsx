@@ -20,6 +20,7 @@ const navLinks = [
   { label: "Pricing", path: "/pricing" },
   { label: "Privacy Policy", path: "/privacy-policy" },
   { label: "Contact", path: "/contact" },
+  { label: "Landing Page", path: "/landing" },
 ];
 
 const Navbar = () => {
