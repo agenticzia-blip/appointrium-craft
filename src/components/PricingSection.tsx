@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-import { CheckCircle, Crown, Zap, Gem, ArrowRight } from "lucide-react";
+import { CheckCircle, Crown, Zap, Gem } from "lucide-react";
 
 const plans = [
   {
     name: "Starter",
-    subtitle: "Perfect for beginners who want to learn the fundamentals.",
     price: "3,000",
     originalPrice: "4,000",
     icon: Zap,
@@ -23,7 +22,6 @@ const plans = [
   },
   {
     name: "Professional",
-    subtitle: "Everything you need to build a profitable automation business.",
     price: "7,000",
     originalPrice: "10,000",
     icon: Crown,
@@ -41,7 +39,6 @@ const plans = [
   },
   {
     name: "Elite",
-    subtitle: "Premium mentorship for serious agency builders.",
     price: "12,000",
     originalPrice: "20,000",
     icon: Gem,
@@ -63,6 +60,7 @@ const plans = [
     ],
   },
 ];
+
 const PricingSection = () => (
   <section className="section-padding text-center">
     <div className="container-narrow">
@@ -88,26 +86,27 @@ const PricingSection = () => (
             >
               {plan.recommended && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-foreground text-primary-foreground text-xs font-display font-semibold px-4 py-1 rounded-full flex items-center gap-1.5">
+                  <Crown className="w-3.5 h-3.5" />
                   Recommended
                 </div>
               )}
               <plan.icon className="w-10 h-10 mb-5 opacity-50" strokeWidth={1.5} />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
-              <p className="text-sm text-muted-foreground mb-5">{plan.subtitle}</p>
-              <div className="mb-8">
-                <span className="text-3xl font-display font-bold">{plan.originalPrice} PKR</span>
+              <div className="mb-6">
+                <p className="text-sm text-muted-foreground line-through mb-1">{plan.originalPrice} PKR</p>
+                <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
                 <span className="text-sm text-muted-foreground ml-2">one-time</span>
               </div>
-              <div className="flex flex-col gap-3.5 mb-8 flex-1">
+              <div className="flex flex-col gap-3 mb-8 flex-1">
                 {plan.features.map((f, j) => (
-                  <div key={j} className="flex items-start gap-3">
-                    <CheckCircle className="w-4.5 h-4.5 shrink-0 mt-0.5 text-emerald-500" />
-                    <span className="text-sm text-foreground/80">{f}</span>
+                  <div key={j} className="flex items-start gap-2.5">
+                    <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 opacity-60" />
+                    <span className="text-sm text-muted-foreground">{f}</span>
                   </div>
                 ))}
               </div>
               <Button asChild variant={plan.recommended ? "hero" : "hero-outline"} className="w-full">
-                <Link to="/contact" className="flex items-center justify-center gap-2">Apply Now <ArrowRight className="w-4 h-4" /></Link>
+                <Link to="/contact">Apply Now</Link>
               </Button>
             </div>
           </ScrollReveal>
