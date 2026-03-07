@@ -35,7 +35,7 @@ const plans = [
       "Live Classes & Mentorship",
       "Appoint Funnels System",
       "Claude Code Masterclass",
-      "1 Client Guaranteed",
+      "90-Day 1 Client Guaranteed",
     ],
   },
   {
@@ -58,8 +58,7 @@ const plans = [
       "Lifetime Updates",
       "Claude Code Masterclass",
       "Claude Code AI Agents",
-      "2 Clients Guaranteed",
-      "90-Day Guarantee",
+      "90-Day 2 Clients Guaranteed",
     ],
   },
 ];
