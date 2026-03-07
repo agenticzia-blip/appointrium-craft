@@ -17,7 +17,6 @@ const plans = [
       "AI Chatbot",
       "MCP Connections",
       "5 Live Agents Build",
-      "Claude Code Access",
     ],
   },
   {
@@ -34,7 +33,6 @@ const plans = [
       "Solution-Based AI Agents",
       "Live Classes & Mentorship",
       "Appoint Funnels System",
-      "Claude Code Access",
       "2 Clients Guaranteed",
     ],
   },
@@ -56,7 +54,6 @@ const plans = [
       "White-Label Resources",
       "Agency Building Blueprint",
       "Lifetime Updates",
-      "Claude Code Access",
       "2 Clients Guaranteed",
       "90-Day Guarantee",
     ],
