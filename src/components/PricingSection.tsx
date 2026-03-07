@@ -57,6 +57,7 @@ const plans = [
       "Agency Building Blueprint",
       "Lifetime Updates",
       "Claude Code Masterclass",
+      "Claude Code AI Agents",
       "2 Clients Guaranteed",
       "90-Day Guarantee",
     ],
