@@ -6,8 +6,7 @@ import { CheckCircle, Crown, Zap, Gem } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "3,000",
-    originalPrice: "4,000",
+    price: "6,000",
     icon: Zap,
     recommended: false,
     features: [
@@ -18,12 +17,12 @@ const plans = [
       "AI Chatbot",
       "MCP Connections",
       "5 Live Agents Build",
+      "Claude Code Access",
     ],
   },
   {
     name: "Professional",
-    price: "7,000",
-    originalPrice: "10,000",
+    price: "15,000",
     icon: Crown,
     recommended: true,
     features: [
@@ -35,12 +34,13 @@ const plans = [
       "Solution-Based AI Agents",
       "Live Classes & Mentorship",
       "Appoint Funnels System",
+      "Claude Code Access",
+      "2 Clients Guaranteed",
     ],
   },
   {
     name: "Elite",
-    price: "12,000",
-    originalPrice: "20,000",
+    price: "30,000",
     icon: Gem,
     recommended: false,
     features: [
@@ -56,6 +56,8 @@ const plans = [
       "White-Label Resources",
       "Agency Building Blueprint",
       "Lifetime Updates",
+      "Claude Code Access",
+      "2 Clients Guaranteed",
       "90-Day Guarantee",
     ],
   },
@@ -68,11 +70,8 @@ const PricingSection = () => (
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
           Pricing & <span className="serif-italic text-gradient">Enrollment</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto mb-4">
+        <p className="text-muted-foreground max-w-xl mx-auto mb-12">
           Choose the plan that matches your ambition. All plans include our bold promise.
-        </p>
-        <p className="text-sm font-display font-semibold text-foreground/80 mb-12">
-          🔥 Limited-time Ramadan Offer
         </p>
       </ScrollReveal>
 
@@ -93,7 +92,6 @@ const PricingSection = () => (
               <plan.icon className="w-10 h-10 mb-5 opacity-50" strokeWidth={1.5} />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
               <div className="mb-6">
-                <p className="text-sm text-muted-foreground line-through mb-1">{plan.originalPrice} PKR</p>
                 <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
                 <span className="text-sm text-muted-foreground ml-2">one-time</span>
               </div>
