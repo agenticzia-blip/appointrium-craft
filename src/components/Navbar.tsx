@@ -57,65 +57,69 @@ const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) =>
-            l.dropdown ? (
-              <div key={l.path} className="relative" ref={dropdownRef}>
-                <button
-                  onClick={() => setCoursesOpen(!coursesOpen)}
-                  className={`text-sm font-medium transition-colors hover:text-foreground flex items-center gap-1 ${
-                    location.pathname.includes("course") ||
-                    location.pathname.includes("voice-agents") ||
-                    location.pathname.includes("whatsapp-automation") ||
-                    location.pathname.includes("live-classes") ||
-                    location.pathname.includes("solution-agents")
-                      ? "text-foreground"
-                      : "text-muted-foreground"
+        {!minimal && (
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((l) =>
+              l.dropdown ? (
+                <div key={l.path} className="relative" ref={dropdownRef}>
+                  <button
+                    onClick={() => setCoursesOpen(!coursesOpen)}
+                    className={`text-sm font-medium transition-colors hover:text-foreground flex items-center gap-1 ${
+                      location.pathname.includes("course") ||
+                      location.pathname.includes("voice-agents") ||
+                      location.pathname.includes("whatsapp-automation") ||
+                      location.pathname.includes("live-classes") ||
+                      location.pathname.includes("solution-agents")
+                        ? "text-foreground"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {l.label}
+                    {coursesOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                  </button>
+
+                  {coursesOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-56 rounded-lg border border-border bg-background shadow-lg z-[100] py-2 animate-fade-in">
+                      {courseLinks.map((c) => (
+                        <Link
+                          key={c.path}
+                          to={c.path}
+                          className={`block px-4 py-2.5 text-sm transition-colors hover:bg-muted ${
+                            location.pathname === c.path
+                              ? "text-foreground"
+                              : "text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={l.path}
+                  to={l.path}
+                  className={`text-sm font-medium transition-colors hover:text-foreground ${
+                    location.pathname === l.path ? "text-foreground" : "text-muted-foreground"
                   }`}
                 >
                   {l.label}
-                  {coursesOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                </button>
-
-                {coursesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 rounded-lg border border-border bg-background shadow-lg z-[100] py-2 animate-fade-in">
-                    {courseLinks.map((c) => (
-                      <Link
-                        key={c.path}
-                        to={c.path}
-                        className={`block px-4 py-2.5 text-sm transition-colors hover:bg-muted ${
-                          location.pathname === c.path
-                            ? "text-foreground"
-                            : "text-muted-foreground hover:text-foreground"
-                        }`}
-                      >
-                        {c.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={l.path}
-                to={l.path}
-                className={`text-sm font-medium transition-colors hover:text-foreground ${
-                  location.pathname === l.path ? "text-foreground" : "text-muted-foreground"
-                }`}
-              >
-                {l.label}
-              </Link>
-            )
-          )}
-          <Button asChild variant="hero" size="sm">
-            <Link to="/pricing">Apply Now</Link>
-          </Button>
-        </div>
+                </Link>
+              )
+            )}
+            <Button asChild variant="hero" size="sm">
+              <Link to="/pricing">Apply Now</Link>
+            </Button>
+          </div>
+        )}
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {!minimal && (
+          <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        )}
       </nav>
 
       {/* Mobile menu */}
