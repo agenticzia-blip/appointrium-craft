@@ -4,8 +4,8 @@ import { Phone, MessageCircle } from "lucide-react";
 
 const LandingPage = () => {
   return (
-    <div>
-      <section className="section-padding pt-28 pb-20 min-h-[90vh] flex items-center relative">
+    <div className="h-screen overflow-hidden">
+      <section className="section-padding pt-28 pb-20 h-full flex items-center relative">
         <div className="container-narrow text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8">
