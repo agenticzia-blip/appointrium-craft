@@ -35,6 +35,18 @@ const PrivacyPolicy = () => (
           </GlassCard>
         </ScrollReveal>
 
+        <ScrollReveal delay={50}>
+          <GlassCard hover={false} className="mb-8 border-primary/20">
+            <h3 className="font-display font-bold text-lg mb-3 text-foreground">💰 Refund Policy</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+              All payments are refundable within the 90-day guarantee period. If any issues arise during this period that are outside the scope of the guarantee, refunds will not be applicable.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              However, if you do not receive the promised value and clients as outlined in your selected package, the remaining clients will be transferred to you without any obligations or additional charges. Our commitment is to deliver what we promise.
+            </p>
+          </GlassCard>
+        </ScrollReveal>
+
         <ScrollReveal delay={100}>
           <p className="text-xs text-muted-foreground text-center mt-12">
             Last updated: February 2026 · Appointrium Academy
