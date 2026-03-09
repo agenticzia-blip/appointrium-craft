@@ -7,6 +7,8 @@ import ParticlesBackground from "./ParticlesBackground";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { pathname } = useLocation();
+  const isLanding = pathname === "/landing";
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -15,9 +17,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <div className="relative min-h-screen">
       <div className="top-light" />
       <ParticlesBackground />
-      <Navbar />
+      {!isLanding && <Navbar />}
       <main className="relative z-10">{children}</main>
-      <Footer />
+      {!isLanding && <Footer />}
       <WhatsAppButton />
     </div>
   );
