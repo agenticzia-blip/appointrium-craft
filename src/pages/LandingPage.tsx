@@ -75,10 +75,10 @@ const LandingPage = () => {
           <ScrollReveal delay={300}>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mx-auto w-full max-w-xs sm:max-w-none sm:w-auto">
               <Button asChild variant="hero-outline" size="default" className="justify-center gap-2 rounded-full h-12 w-full sm:w-auto sm:h-11 px-7 text-sm">
-                <a href="#pricing-section">View Plans <ArrowRight className="w-4 h-4" /></a>
+                <a href="tel:+923303120032">Call Now <Phone className="w-4 h-4" /></a>
               </Button>
-              <Button asChild variant="hero-outline" size="default" className="justify-center rounded-full h-12 w-full sm:w-auto sm:h-11 px-7 text-sm">
-                <a href="#enroll-form">Apply Now</a>
+              <Button asChild variant="hero-outline" size="default" className="justify-center gap-2 rounded-full h-12 w-full sm:w-auto sm:h-11 px-7 text-sm">
+                <a href="https://wa.me/923303120032" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <MessageCircle className="w-4 h-4" /></a>
               </Button>
             </div>
           </ScrollReveal>
