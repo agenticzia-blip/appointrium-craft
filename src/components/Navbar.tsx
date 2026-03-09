@@ -115,9 +115,13 @@ const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
         )}
 
         {/* Mobile toggle */}
-        {!minimal && (
+        {!minimal ? (
           <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
             {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        ) : (
+          <button className="md:hidden text-foreground cursor-default" aria-hidden="true">
+            <Menu size={24} />
           </button>
         )}
       </nav>
