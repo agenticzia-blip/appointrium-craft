@@ -23,7 +23,7 @@ const navLinks = [
   { label: "Landing Page", path: "/landing" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
   const [open, setOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);

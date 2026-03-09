@@ -14,10 +14,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
   }, [pathname]);
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen scroll-smooth">
       <div className="top-light" />
       <ParticlesBackground />
-      {!isLanding && <Navbar />}
+      <Navbar minimal={isLanding} />
       <main className="relative z-10">{children}</main>
       {!isLanding && <Footer />}
       <WhatsAppButton />
