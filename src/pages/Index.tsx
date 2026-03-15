@@ -164,7 +164,7 @@ const Index = () => {
                 We're so confident in this program that we put our money where our mouth is.
               </p>
               <p className="text-sm font-display font-semibold mt-4 text-foreground/80">
-                🔥 Limited-time Ramadan Offer
+                🔥 Limited-time Eid Offer
               </p>
             </div>
           </ScrollReveal>
