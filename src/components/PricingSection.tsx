@@ -92,6 +92,8 @@ const PricingSection = () => (
               <plan.icon className="w-10 h-10 mb-5 opacity-50" strokeWidth={1.5} />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
               <div className="mb-6">
+                <span className="text-sm text-muted-foreground line-through mr-2">PKR {plan.oldPrice}</span>
+                <br />
                 <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
                 <span className="text-sm text-muted-foreground ml-2">one-time</span>
               </div>
