@@ -7,6 +7,7 @@ const plans = [
   {
     name: "Starter",
     price: "4,000",
+    oldPrice: "6,000",
     icon: Zap,
     recommended: false,
     features: [
@@ -22,6 +23,7 @@ const plans = [
   {
     name: "Professional",
     price: "12,000",
+    oldPrice: "15,000",
     icon: Crown,
     recommended: true,
     features: [
@@ -39,6 +41,7 @@ const plans = [
   {
     name: "Elite",
     price: "16,000",
+    oldPrice: "30,000",
     icon: Gem,
     recommended: false,
     features: [
