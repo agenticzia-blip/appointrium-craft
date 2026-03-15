@@ -20,7 +20,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Navbar minimal={isLanding} />
       <main className="relative z-10">{children}</main>
       {!isLanding && <Footer />}
-      <WhatsAppButton />
+      <ChatBot />
     </div>
   );
 };
