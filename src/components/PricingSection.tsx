@@ -67,11 +67,11 @@ const PricingSection = () => (
   <section className="section-padding text-center">
     <div className="container-narrow">
       <ScrollReveal>
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          Pricing & <span className="serif-italic text-gradient">Enrollment</span>
+         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+          🎉 Eid <span className="serif-italic text-gradient">Special Offer</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mb-12">
-          Choose the plan that matches your ambition. All plans include our bold promise.
+          Limited-time Eid pricing — grab your spot before it's gone.
         </p>
       </ScrollReveal>
 
