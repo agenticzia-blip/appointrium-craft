@@ -6,7 +6,7 @@ import { CheckCircle, Crown, Zap, Gem } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "6,000",
+    price: "4,000",
     icon: Zap,
     recommended: false,
     features: [
@@ -17,12 +17,11 @@ const plans = [
       "AI Chatbot",
       "MCP Connections",
       "5 Live Agents Build",
-      "Claude Code Masterclass",
     ],
   },
   {
     name: "Professional",
-    price: "15,000",
+    price: "12,000",
     icon: Crown,
     recommended: true,
     features: [
@@ -34,13 +33,12 @@ const plans = [
       "Solution-Based AI Agents",
       "Live Classes & Mentorship",
       "Appoint Funnels System",
-      "Claude Code Masterclass",
       "90-Days 1 Client Guaranteed",
     ],
   },
   {
     name: "Elite",
-    price: "30,000",
+    price: "16,000",
     icon: Gem,
     recommended: false,
     features: [
@@ -51,14 +49,13 @@ const plans = [
       "Trained Use of Appoint Funnels Testimonials",
       "One Auto Dialer for Dialing Calls",
       "Use Our Cold Calling & Cold Emailing Scripts",
-      "1-on-1 Coaching Calls",
+      "1-on-1 Weekly Coaching Calls",
       "Done-For-You Templates",
       "White-Label Resources",
       "Agency Building Blueprint",
       "Lifetime Updates",
       "Claude Code Masterclass",
-      "Claude Code AI Agents",
-      "90-Days 2 Clients Guaranteed",
+      "90-Days 1 Client Guaranteed",
     ],
   },
 ];
