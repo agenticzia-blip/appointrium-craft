@@ -7,6 +7,7 @@ const plans = [
   {
     name: "Starter",
     price: "4,000",
+    oldPrice: "6,000",
     icon: Zap,
     recommended: false,
     features: [
@@ -22,6 +23,7 @@ const plans = [
   {
     name: "Professional",
     price: "12,000",
+    oldPrice: "15,000",
     icon: Crown,
     recommended: true,
     features: [
@@ -39,6 +41,7 @@ const plans = [
   {
     name: "Elite",
     price: "16,000",
+    oldPrice: "30,000",
     icon: Gem,
     recommended: false,
     features: [
@@ -64,11 +67,11 @@ const PricingSection = () => (
   <section className="section-padding text-center">
     <div className="container-narrow">
       <ScrollReveal>
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          Pricing & <span className="serif-italic text-gradient">Enrollment</span>
+         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+          🎉 Eid <span className="serif-italic text-gradient">Special Offer</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mb-12">
-          Choose the plan that matches your ambition. All plans include our bold promise.
+          Limited-time Eid pricing — grab your spot before it's gone.
         </p>
       </ScrollReveal>
 
@@ -89,6 +92,8 @@ const PricingSection = () => (
               <plan.icon className="w-10 h-10 mb-5 opacity-50" strokeWidth={1.5} />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
               <div className="mb-6">
+                <span className="text-sm text-muted-foreground line-through mr-2">PKR {plan.oldPrice}</span>
+                <br />
                 <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
                 <span className="text-sm text-muted-foreground ml-2">one-time</span>
               </div>
