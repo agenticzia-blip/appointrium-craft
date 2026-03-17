@@ -53,7 +53,7 @@ const App = () => (
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/what-is-ai-automation" element={<WhatIsAIAutomation />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/form" element={<FormPage />} />
+            
             <Route path="/landing" element={<LandingPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />

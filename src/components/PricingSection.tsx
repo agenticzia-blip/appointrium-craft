@@ -106,7 +106,7 @@ const PricingSection = () => (
                 ))}
               </div>
               <Button asChild variant={plan.recommended ? "hero" : "hero-outline"} className="w-full">
-                <Link to="/contact">Apply Now</Link>
+                <a href="https://wa.me/923303120032" target="_blank" rel="noopener noreferrer">Apply Now</a>
               </Button>
             </div>
           </ScrollReveal>
