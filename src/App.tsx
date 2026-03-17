@@ -22,7 +22,7 @@ import Pricing from "./pages/Pricing";
 import WhatIsAIAutomation from "./pages/WhatIsAIAutomation";
 import Contact from "./pages/Contact";
 import LandingPage from "./pages/LandingPage";
-import FormPage from "./pages/FormPage";
+
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
