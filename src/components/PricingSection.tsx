@@ -68,10 +68,10 @@ const PricingSection = () => (
     <div className="container-narrow">
       <ScrollReveal>
          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          🎉 Eid <span className="serif-italic text-gradient">Special Offer</span>
+          Courses <span className="serif-italic text-gradient">Pricing.</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mb-12">
-          Limited-time Eid pricing — grab your spot before it's gone.
+          Limited-time — grab your spot before it's gone.
         </p>
       </ScrollReveal>
 
