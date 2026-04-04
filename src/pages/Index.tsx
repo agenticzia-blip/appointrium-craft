@@ -163,9 +163,6 @@ const Index = () => {
               <p className="text-muted-foreground max-w-lg mx-auto mb-2">
                 We're so confident in this program that we put our money where our mouth is.
               </p>
-              <p className="text-sm font-display font-semibold mt-4 text-foreground/80">
-                🔥 Limited-time Eid Offer
-              </p>
             </div>
           </ScrollReveal>
         </div>

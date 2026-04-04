@@ -6,8 +6,7 @@ import { CheckCircle, Crown, Zap, Gem } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "4,000",
-    oldPrice: "6,000",
+    price: "6,000",
     icon: Zap,
     recommended: false,
     features: [
@@ -22,8 +21,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "12,000",
-    oldPrice: "15,000",
+    price: "15,000",
     icon: Crown,
     recommended: true,
     features: [
@@ -40,8 +38,7 @@ const plans = [
   },
   {
     name: "Elite",
-    price: "16,000",
-    oldPrice: "30,000",
+    price: "30,000",
     icon: Gem,
     recommended: false,
     features: [
@@ -92,8 +89,6 @@ const PricingSection = () => (
               <plan.icon className="w-10 h-10 mb-5 opacity-50" strokeWidth={1.5} />
               <h3 className="font-display font-bold text-xl mb-1">{plan.name}</h3>
               <div className="mb-6">
-                <span className="text-sm text-muted-foreground line-through mr-2">PKR {plan.oldPrice}</span>
-                <br />
                 <span className="text-3xl font-display font-bold">PKR {plan.price}</span>
                 <span className="text-sm text-muted-foreground ml-2">one-time</span>
               </div>
