@@ -33,7 +33,7 @@ const plans = [
       "Solution-Based AI Agents",
       "Live Classes & Mentorship",
       "Appoint Funnels System",
-      "90-Days 1 Client Guaranteed",
+      "90-Days 2 Clients Guaranteed",
     ],
   },
   {
