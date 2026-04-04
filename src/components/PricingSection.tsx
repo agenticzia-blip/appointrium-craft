@@ -21,8 +21,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "12,000",
-    oldPrice: "15,000",
+    price: "15,000",
     icon: Crown,
     recommended: true,
     features: [
