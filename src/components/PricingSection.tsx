@@ -38,8 +38,7 @@ const plans = [
   },
   {
     name: "Elite",
-    price: "16,000",
-    oldPrice: "30,000",
+    price: "30,000",
     icon: Gem,
     recommended: false,
     features: [
