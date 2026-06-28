@@ -16,48 +16,48 @@ export type Database = {
     Tables: {
       student_applications: {
         Row: {
-          background_details: string | null
+          background_details: string
           created_at: string
-          current_city: string | null
-          current_monthly_income: string | null
-          education: string | null
-          email: string | null
-          full_name: string | null
-          goals: string | null
+          current_city: string
+          current_monthly_income: string
+          education: string
+          email: string
+          full_name: string
+          goals: string
           id: string
-          income_goal: string | null
-          past_skills: string | null
-          phone_number: string | null
+          income_goal: string
+          past_skills: string
+          phone_number: string
           student_id: string
         }
         Insert: {
-          background_details?: string | null
+          background_details: string
           created_at?: string
-          current_city?: string | null
-          current_monthly_income?: string | null
-          education?: string | null
-          email?: string | null
-          full_name?: string | null
-          goals?: string | null
+          current_city: string
+          current_monthly_income: string
+          education: string
+          email: string
+          full_name: string
+          goals: string
           id?: string
-          income_goal?: string | null
-          past_skills?: string | null
-          phone_number?: string | null
+          income_goal: string
+          past_skills: string
+          phone_number: string
           student_id?: string
         }
         Update: {
-          background_details?: string | null
+          background_details?: string
           created_at?: string
-          current_city?: string | null
-          current_monthly_income?: string | null
-          education?: string | null
-          email?: string | null
-          full_name?: string | null
-          goals?: string | null
+          current_city?: string
+          current_monthly_income?: string
+          education?: string
+          email?: string
+          full_name?: string
+          goals?: string
           id?: string
-          income_goal?: string | null
-          past_skills?: string | null
-          phone_number?: string | null
+          income_goal?: string
+          past_skills?: string
+          phone_number?: string
           student_id?: string
         }
         Relationships: []
