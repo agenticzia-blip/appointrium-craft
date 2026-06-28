@@ -168,8 +168,8 @@ const StudentForm = () => {
                       value={form[f.key]}
                       onChange={(e) => update(f.key, e.target.value)}
                       rows={3}
-                      required
                     />
+
                   ) : (
                     <Input
                       id={f.key}
