@@ -14,13 +14,60 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      student_applications: {
+        Row: {
+          background_details: string
+          created_at: string
+          current_city: string
+          current_monthly_income: string
+          education: string
+          email: string
+          full_name: string
+          goals: string
+          id: string
+          income_goal: string
+          past_skills: string
+          phone_number: string
+          student_id: string
+        }
+        Insert: {
+          background_details: string
+          created_at?: string
+          current_city: string
+          current_monthly_income: string
+          education: string
+          email: string
+          full_name: string
+          goals: string
+          id?: string
+          income_goal: string
+          past_skills: string
+          phone_number: string
+          student_id?: string
+        }
+        Update: {
+          background_details?: string
+          created_at?: string
+          current_city?: string
+          current_monthly_income?: string
+          education?: string
+          email?: string
+          full_name?: string
+          goals?: string
+          id?: string
+          income_goal?: string
+          past_skills?: string
+          phone_number?: string
+          student_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      generate_student_id: { Args: never; Returns: string }
     }
     Enums: {
       [_ in never]: never
