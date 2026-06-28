@@ -10,16 +10,15 @@ import { Copy, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const schema = z.object({
-  full_name: z.string().trim().min(1, "Required").max(120),
-  phone_number: z.string().trim().min(5, "Required").max(30),
-  email: z.string().trim().email("Invalid email").max(255),
-  education: z.string().trim().min(1, "Required").max(200),
-  current_city: z.string().trim().min(1, "Required").max(120),
-  background_details: z.string().trim().min(1, "Required").max(1000),
-  past_skills: z.string().trim().min(1, "Required").max(1000),
-  current_monthly_income: z.string().trim().min(1, "Required").max(100),
-  goals: z.string().trim().min(1, "Required").max(1000),
-  income_goal: z.string().trim().min(1, "Required").max(100),
+  full_name: z.string().trim().max(120).optional(),
+  phone_number: z.string().trim().max(30).optional(),
+  email: z.union([z.literal(""), z.string().trim().email("Invalid email").max(255)]).optional(),
+  education: z.string().trim().max(200).optional(),
+  current_city: z.string().trim().max(120).optional(),
+  past_skills: z.string().trim().max(1000).optional(),
+  current_monthly_income: z.string().trim().max(100).optional(),
+  goals: z.string().trim().max(1000).optional(),
+  income_goal: z.string().trim().max(100).optional(),
 });
 
 type FormState = {
@@ -28,7 +27,6 @@ type FormState = {
   email: string;
   education: string;
   current_city: string;
-  background_details: string;
   past_skills: string;
   current_monthly_income: string;
   goals: string;
@@ -41,7 +39,6 @@ const initial: FormState = {
   email: "",
   education: "",
   current_city: "",
-  background_details: "",
   past_skills: "",
   current_monthly_income: "",
   goals: "",
@@ -54,7 +51,6 @@ const fields: { key: keyof FormState; label: string; type?: string; textarea?: b
   { key: "email", label: "Email Address", type: "email" },
   { key: "education", label: "Education" },
   { key: "current_city", label: "Current City" },
-  { key: "background_details", label: "Background Details", textarea: true },
   { key: "past_skills", label: "Past Skills / Experience", textarea: true },
   { key: "current_monthly_income", label: "Current Monthly Income" },
   { key: "goals", label: "Goals", textarea: true },
