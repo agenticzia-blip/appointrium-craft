@@ -66,9 +66,10 @@ const StudentForm = () => {
       return;
     }
     setLoading(true);
+    const payload: FormState = parsed.data as FormState;
     const { data, error } = await supabase
       .from("student_applications")
-      .insert(parsed.data as FormState)
+      .insert([payload])
       .select("student_id")
       .single();
     setLoading(false);
