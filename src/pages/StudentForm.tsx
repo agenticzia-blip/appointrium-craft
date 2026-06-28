@@ -22,7 +22,18 @@ const schema = z.object({
   income_goal: z.string().trim().min(1, "Required").max(100),
 });
 
-type FormState = z.infer<typeof schema>;
+type FormState = {
+  full_name: string;
+  phone_number: string;
+  email: string;
+  education: string;
+  current_city: string;
+  background_details: string;
+  past_skills: string;
+  current_monthly_income: string;
+  goals: string;
+  income_goal: string;
+};
 
 const initial: FormState = {
   full_name: "",
