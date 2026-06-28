@@ -136,7 +136,7 @@ const StudentForm = () => {
                 }}
                 variant="hero-outline"
               >
-                Submit another application
+                Submit another onboarding
               </Button>
             </div>
           </ScrollReveal>
