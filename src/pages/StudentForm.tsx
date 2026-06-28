@@ -176,7 +176,6 @@ const StudentForm = () => {
                       type={f.type || "text"}
                       value={form[f.key]}
                       onChange={(e) => update(f.key, e.target.value)}
-                      required
                     />
                   )}
                 </div>
