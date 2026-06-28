@@ -82,11 +82,31 @@ const StudentForm = () => {
       .insert([form])
       .select("student_id")
       .single();
-    setLoading(false);
     if (error || !data) {
+      setLoading(false);
       toast.error("Submission failed. Please try again.");
       return;
     }
+
+    // Send to n8n webhook (non-blocking failure)
+    try {
+      await fetch(
+        "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            student_id: data.student_id,
+            ...form,
+            submitted_at: new Date().toISOString(),
+          }),
+        }
+      );
+    } catch (err) {
+      console.error("Webhook delivery failed", err);
+    }
+
+    setLoading(false);
     setStudentId(data.student_id);
     toast.success("Application submitted!");
   };
