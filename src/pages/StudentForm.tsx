@@ -105,10 +105,10 @@ const StudentForm = () => {
         <ScrollReveal>
           <div className="text-center mb-10">
             <h1 className="text-3xl md:text-5xl font-display font-bold mb-4">
-              Student <span className="serif-italic text-gradient">Application</span>
+              Student <span className="serif-italic text-gradient">Onboarding</span>
             </h1>
             <p className="text-muted-foreground">
-              Fill the form below. You'll receive your unique Student ID — copy and send it to us to confirm your enrollment.
+              Fill the onboarding form below. You'll receive your unique Student ID — copy and send it to us to complete your onboarding.
             </p>
           </div>
         </ScrollReveal>
