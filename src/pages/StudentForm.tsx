@@ -102,17 +102,23 @@ const StudentForm = () => {
         body: JSON.stringify(payload),
       });
 
-      supabase.rpc("submit_student_application", {
-        p_full_name: payload.full_name,
-        p_phone_number: payload.phone_number,
-        p_email: payload.email,
-        p_education: payload.education,
-        p_current_city: payload.current_city,
-        p_past_skills: payload.past_skills,
-        p_current_monthly_income: payload.current_monthly_income,
-        p_goals: payload.goals,
-        p_income_goal: payload.income_goal,
-      });
+      void supabase
+        .from("student_applications")
+        .insert({
+          student_id: payload.student_id,
+          full_name: payload.full_name,
+          phone_number: payload.phone_number,
+          email: payload.email,
+          education: payload.education,
+          current_city: payload.current_city,
+          past_skills: payload.past_skills,
+          current_monthly_income: payload.current_monthly_income,
+          goals: payload.goals,
+          income_goal: payload.income_goal,
+        })
+        .then(({ error }) => {
+          if (error) console.error("Database save failed", error);
+        });
 
       setStudentId(newStudentId);
       toast.success("Submitted successfully! Copy your Student ID.");
