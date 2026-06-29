@@ -9,6 +9,8 @@ import { toast } from "sonner";
 import { Copy, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
+const WEBHOOK_URL = "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab";
+
 const schema = z.object({
   full_name: z.string().trim().min(1, "Required").max(120),
   phone_number: z.string().trim().min(5, "Required").max(30),
@@ -55,6 +57,17 @@ const StudentForm = () => {
 
   const update = (k: keyof FormState, v: string) => setForm((p) => ({ ...p, [k]: v }));
 
+  const generateStudentId = (fullName: string) => {
+    const firstName = fullName.trim().split(/\s+/)[0] || "STU";
+    const nameSlug = firstName.replace(/[^a-zA-Z0-9]/g, "").toUpperCase().slice(0, 12) || "STU";
+    const year = new Date().getFullYear().toString().slice(-2);
+    const bytes = new Uint8Array(4);
+    crypto.getRandomValues(bytes);
+    const randomPart = Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("").toUpperCase();
+
+    return `APX-${nameSlug}-${year}-${randomPart}`;
+  };
+
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     const parsed = schema.safeParse(form);
@@ -64,48 +77,51 @@ const StudentForm = () => {
     }
     setLoading(true);
 
-    const { data, error } = await supabase.rpc("submit_student_application", {
-      p_full_name: form.full_name,
-      p_phone_number: form.phone_number,
-      p_email: form.email,
-      p_education: form.education,
-      p_current_city: form.current_city,
-      p_past_skills: form.past_skills,
-      p_current_monthly_income: form.current_monthly_income,
-      p_goals: form.goals,
-      p_income_goal: form.income_goal,
-    });
+    const newStudentId = generateStudentId(form.full_name);
+    const payload = {
+      student_id: newStudentId,
+      username: newStudentId,
+      full_name: parsed.data.full_name,
+      phone_number: parsed.data.phone_number,
+      email: parsed.data.email,
+      education: parsed.data.education,
+      current_city: parsed.data.current_city,
+      past_skills: parsed.data.past_skills,
+      current_monthly_income: parsed.data.current_monthly_income,
+      goals: parsed.data.goals,
+      income_goal: parsed.data.income_goal,
+      submitted_at: new Date().toISOString(),
+      source: "student_onboarding_form",
+    };
 
-    if (error || !data) {
-      console.error("Submission error", error);
-      setLoading(false);
-      toast.error("Submission failed. Please try again.");
-      return;
-    }
-
-    const newStudentId = data as string;
-
-    // Send to n8n webhook (non-blocking failure)
     try {
-      await fetch(
-        "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            student_id: newStudentId,
-            ...form,
-            submitted_at: new Date().toISOString(),
-          }),
-        }
-      );
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        mode: "no-cors",
+        body: JSON.stringify(payload),
+      });
+
+      supabase.rpc("submit_student_application", {
+        p_full_name: payload.full_name,
+        p_phone_number: payload.phone_number,
+        p_email: payload.email,
+        p_education: payload.education,
+        p_current_city: payload.current_city,
+        p_past_skills: payload.past_skills,
+        p_current_monthly_income: payload.current_monthly_income,
+        p_goals: payload.goals,
+        p_income_goal: payload.income_goal,
+      });
+
+      setStudentId(newStudentId);
+      toast.success("Submitted successfully! Copy your Student ID.");
     } catch (err) {
       console.error("Webhook delivery failed", err);
+      toast.error("Submission failed. Please try again.");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
-    setStudentId(newStudentId);
-    toast.success("Onboarding submitted successfully!");
   };
 
   const copyId = async () => {
