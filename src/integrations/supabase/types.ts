@@ -16,48 +16,48 @@ export type Database = {
     Tables: {
       student_applications: {
         Row: {
-          background_details: string
+          background_details: string | null
           created_at: string
-          current_city: string
-          current_monthly_income: string
-          education: string
-          email: string
-          full_name: string
-          goals: string
+          current_city: string | null
+          current_monthly_income: string | null
+          education: string | null
+          email: string | null
+          full_name: string | null
+          goals: string | null
           id: string
-          income_goal: string
-          past_skills: string
-          phone_number: string
+          income_goal: string | null
+          past_skills: string | null
+          phone_number: string | null
           student_id: string
         }
         Insert: {
-          background_details: string
+          background_details?: string | null
           created_at?: string
-          current_city: string
-          current_monthly_income: string
-          education: string
-          email: string
-          full_name: string
-          goals: string
+          current_city?: string | null
+          current_monthly_income?: string | null
+          education?: string | null
+          email?: string | null
+          full_name?: string | null
+          goals?: string | null
           id?: string
-          income_goal: string
-          past_skills: string
-          phone_number: string
+          income_goal?: string | null
+          past_skills?: string | null
+          phone_number?: string | null
           student_id?: string
         }
         Update: {
-          background_details?: string
+          background_details?: string | null
           created_at?: string
-          current_city?: string
-          current_monthly_income?: string
-          education?: string
-          email?: string
-          full_name?: string
-          goals?: string
+          current_city?: string | null
+          current_monthly_income?: string | null
+          education?: string | null
+          email?: string | null
+          full_name?: string | null
+          goals?: string | null
           id?: string
-          income_goal?: string
-          past_skills?: string
-          phone_number?: string
+          income_goal?: string | null
+          past_skills?: string | null
+          phone_number?: string | null
           student_id?: string
         }
         Relationships: []
@@ -68,6 +68,20 @@ export type Database = {
     }
     Functions: {
       generate_student_id: { Args: never; Returns: string }
+      submit_student_application: {
+        Args: {
+          p_current_city: string
+          p_current_monthly_income: string
+          p_education: string
+          p_email: string
+          p_full_name: string
+          p_goals: string
+          p_income_goal: string
+          p_past_skills: string
+          p_phone_number: string
+        }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
