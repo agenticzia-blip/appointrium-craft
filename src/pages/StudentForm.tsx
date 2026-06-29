@@ -15,25 +15,13 @@ const schema = z.object({
   email: z.string().trim().email("Invalid email").max(255),
   education: z.string().trim().min(1, "Required").max(200),
   current_city: z.string().trim().min(1, "Required").max(120),
-  background_details: z.string().trim().min(1, "Required").max(1000),
   past_skills: z.string().trim().min(1, "Required").max(1000),
   current_monthly_income: z.string().trim().min(1, "Required").max(100),
   goals: z.string().trim().min(1, "Required").max(1000),
   income_goal: z.string().trim().min(1, "Required").max(100),
 });
 
-type FormState = {
-  full_name: string;
-  phone_number: string;
-  email: string;
-  education: string;
-  current_city: string;
-  background_details: string;
-  past_skills: string;
-  current_monthly_income: string;
-  goals: string;
-  income_goal: string;
-};
+type FormState = z.infer<typeof schema>;
 
 const initial: FormState = {
   full_name: "",
@@ -41,7 +29,6 @@ const initial: FormState = {
   email: "",
   education: "",
   current_city: "",
-  background_details: "",
   past_skills: "",
   current_monthly_income: "",
   goals: "",
@@ -54,7 +41,6 @@ const fields: { key: keyof FormState; label: string; type?: string; textarea?: b
   { key: "email", label: "Email Address", type: "email" },
   { key: "education", label: "Education" },
   { key: "current_city", label: "Current City" },
-  { key: "background_details", label: "Background Details", textarea: true },
   { key: "past_skills", label: "Past Skills / Experience", textarea: true },
   { key: "current_monthly_income", label: "Current Monthly Income" },
   { key: "goals", label: "Goals", textarea: true },
@@ -77,16 +63,27 @@ const StudentForm = () => {
       return;
     }
     setLoading(true);
-    const { data, error } = await supabase
-      .from("student_applications")
-      .insert([form])
-      .select("student_id")
-      .single();
+
+    const { data, error } = await supabase.rpc("submit_student_application", {
+      p_full_name: form.full_name,
+      p_phone_number: form.phone_number,
+      p_email: form.email,
+      p_education: form.education,
+      p_current_city: form.current_city,
+      p_past_skills: form.past_skills,
+      p_current_monthly_income: form.current_monthly_income,
+      p_goals: form.goals,
+      p_income_goal: form.income_goal,
+    });
+
     if (error || !data) {
+      console.error("Submission error", error);
       setLoading(false);
       toast.error("Submission failed. Please try again.");
       return;
     }
+
+    const newStudentId = data as string;
 
     // Send to n8n webhook (non-blocking failure)
     try {
@@ -96,7 +93,7 @@ const StudentForm = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            student_id: data.student_id,
+            student_id: newStudentId,
             ...form,
             submitted_at: new Date().toISOString(),
           }),
@@ -107,8 +104,8 @@ const StudentForm = () => {
     }
 
     setLoading(false);
-    setStudentId(data.student_id);
-    toast.success("Application submitted!");
+    setStudentId(newStudentId);
+    toast.success("Onboarding submitted successfully!");
   };
 
   const copyId = async () => {
@@ -139,10 +136,10 @@ const StudentForm = () => {
               <CheckCircle2 className="w-14 h-14 mx-auto mb-4 text-primary" />
               <h2 className="text-2xl font-display font-bold mb-2">You're In!</h2>
               <p className="text-muted-foreground mb-6">
-                Here's your Student ID. Copy it and send it to us on WhatsApp / email to confirm your spot.
+                Here's your unique Student ID. Copy it and send it to us on WhatsApp / email to confirm your spot.
               </p>
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <code className="glass px-5 py-3 rounded-lg text-lg md:text-2xl font-display font-bold tracking-widest">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+                <code className="glass px-5 py-3 rounded-lg text-base md:text-2xl font-display font-bold tracking-widest break-all">
                   {studentId}
                 </code>
                 <Button onClick={copyId} variant="hero-outline" size="icon" aria-label="Copy student ID">
