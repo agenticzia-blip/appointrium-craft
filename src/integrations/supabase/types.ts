@@ -68,6 +68,20 @@ export type Database = {
     }
     Functions: {
       generate_student_id: { Args: never; Returns: string }
+      submit_student_application: {
+        Args: {
+          p_current_city: string
+          p_current_monthly_income: string
+          p_education: string
+          p_email: string
+          p_full_name: string
+          p_goals: string
+          p_income_goal: string
+          p_past_skills: string
+          p_phone_number: string
+        }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
