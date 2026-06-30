@@ -94,6 +94,7 @@ const StudentForm = () => {
       current_monthly_income: parsed.data.current_monthly_income,
       goals: parsed.data.goals,
       income_goal: parsed.data.income_goal,
+      plan: parsed.data.plan,
       submitted_at: new Date().toISOString(),
       source: "student_onboarding_form",
     };
@@ -119,11 +120,13 @@ const StudentForm = () => {
           current_monthly_income: payload.current_monthly_income,
           goals: payload.goals,
           income_goal: payload.income_goal,
+          background_details: `Plan: ${payload.plan}`,
         })
         .then(({ error }) => {
           if (error) console.error("Database save failed", error);
         });
 
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setStudentId(newStudentId);
       toast.success("Submitted successfully! Copy your Student ID.");
     } catch (err) {
