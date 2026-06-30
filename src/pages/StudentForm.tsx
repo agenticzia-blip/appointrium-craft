@@ -11,6 +11,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const WEBHOOK_URL = "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab";
 
+const PLAN_OPTIONS = ["Starter (PKR 10,000)", "Professional (PKR 30,000)", "Elite (PKR 50,000)"] as const;
+
 const schema = z.object({
   full_name: z.string().trim().min(1, "Required").max(120),
   phone_number: z.string().trim().min(5, "Required").max(30),
@@ -21,6 +23,7 @@ const schema = z.object({
   current_monthly_income: z.string().trim().min(1, "Required").max(100),
   goals: z.string().trim().min(1, "Required").max(1000),
   income_goal: z.string().trim().min(1, "Required").max(100),
+  plan: z.string().trim().min(1, "Please select a plan").max(100),
 });
 
 type FormState = z.infer<typeof schema>;
@@ -35,6 +38,7 @@ const initial: FormState = {
   current_monthly_income: "",
   goals: "",
   income_goal: "",
+  plan: "",
 };
 
 const fields: { key: keyof FormState; label: string; type?: string; textarea?: boolean }[] = [
@@ -90,6 +94,7 @@ const StudentForm = () => {
       current_monthly_income: parsed.data.current_monthly_income,
       goals: parsed.data.goals,
       income_goal: parsed.data.income_goal,
+      plan: parsed.data.plan,
       submitted_at: new Date().toISOString(),
       source: "student_onboarding_form",
     };
@@ -115,11 +120,13 @@ const StudentForm = () => {
           current_monthly_income: payload.current_monthly_income,
           goals: payload.goals,
           income_goal: payload.income_goal,
+          background_details: `Plan: ${payload.plan}`,
         })
         .then(({ error }) => {
           if (error) console.error("Database save failed", error);
         });
 
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setStudentId(newStudentId);
       toast.success("Submitted successfully! Copy your Student ID.");
     } catch (err) {
@@ -204,6 +211,33 @@ const StudentForm = () => {
                   )}
                 </div>
               ))}
+
+              <div className="space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-5">
+                <Label className="text-base font-display font-semibold">Which plan did you take admission in?</Label>
+                <p className="text-xs text-muted-foreground">Select the course plan you've enrolled / paying for.</p>
+                <div className="grid grid-cols-1 gap-2 pt-1">
+                  {PLAN_OPTIONS.map((p) => (
+                    <label
+                      key={p}
+                      className={`flex items-center gap-3 cursor-pointer rounded-lg border px-4 py-3 transition-colors ${
+                        form.plan === p ? "border-primary bg-primary/10" : "border-border hover:border-primary/40"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="plan"
+                        value={p}
+                        checked={form.plan === p}
+                        onChange={(e) => update("plan", e.target.value)}
+                        className="accent-primary"
+                        required
+                      />
+                      <span className="text-sm font-medium">{p}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
               <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>
                 {loading ? "Submitting..." : "Get My Student ID"}
               </Button>
