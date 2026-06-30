@@ -211,6 +211,33 @@ const StudentForm = () => {
                   )}
                 </div>
               ))}
+
+              <div className="space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-5">
+                <Label className="text-base font-display font-semibold">Which plan did you take admission in?</Label>
+                <p className="text-xs text-muted-foreground">Select the course plan you've enrolled / paying for.</p>
+                <div className="grid grid-cols-1 gap-2 pt-1">
+                  {PLAN_OPTIONS.map((p) => (
+                    <label
+                      key={p}
+                      className={`flex items-center gap-3 cursor-pointer rounded-lg border px-4 py-3 transition-colors ${
+                        form.plan === p ? "border-primary bg-primary/10" : "border-border hover:border-primary/40"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="plan"
+                        value={p}
+                        checked={form.plan === p}
+                        onChange={(e) => update("plan", e.target.value)}
+                        className="accent-primary"
+                        required
+                      />
+                      <span className="text-sm font-medium">{p}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
               <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>
                 {loading ? "Submitting..." : "Get My Student ID"}
               </Button>
