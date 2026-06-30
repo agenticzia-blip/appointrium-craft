@@ -11,6 +11,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const WEBHOOK_URL = "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab";
 
+const PLAN_OPTIONS = ["Starter (PKR 10,000)", "Professional (PKR 30,000)", "Elite (PKR 50,000)"] as const;
+
 const schema = z.object({
   full_name: z.string().trim().min(1, "Required").max(120),
   phone_number: z.string().trim().min(5, "Required").max(30),
@@ -21,6 +23,7 @@ const schema = z.object({
   current_monthly_income: z.string().trim().min(1, "Required").max(100),
   goals: z.string().trim().min(1, "Required").max(1000),
   income_goal: z.string().trim().min(1, "Required").max(100),
+  plan: z.string().trim().min(1, "Please select a plan").max(100),
 });
 
 type FormState = z.infer<typeof schema>;
@@ -35,6 +38,7 @@ const initial: FormState = {
   current_monthly_income: "",
   goals: "",
   income_goal: "",
+  plan: "",
 };
 
 const fields: { key: keyof FormState; label: string; type?: string; textarea?: boolean }[] = [
