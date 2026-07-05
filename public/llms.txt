@@ -1,0 +1,28 @@
+# Appointrium Academy
+
+> Appointrium Academy teaches AI automation, N8N workflows, AI agents, voice agents, and WhatsApp automation — with a 90-day guarantee to land your first client.
+
+## Pages
+
+- [Home](/): Overview of Appointrium Academy and the 90-day first-client guarantee.
+- [About](/about): Who we are and how the academy works.
+- [Why AI](/why-ai): Why AI automation is a high-demand skill right now.
+- [What Is AI Automation](/what-is-ai-automation): Beginner-friendly intro to AI automation.
+- [Courses](/courses): Full list of available courses.
+- [N8N Course](/n8n-course): Master N8N workflow automation end-to-end.
+- [AI Agents Course](/ai-agents-course): Build intelligent AI agents for real business problems.
+- [Voice Agents](/voice-agents): Build AI voice agents for calls and support.
+- [WhatsApp Automation](/whatsapp-automation): Automate sales and support on WhatsApp.
+- [Live Classes](/live-classes): Live, mentor-led sessions.
+- [Solution Agents](/solution-agents): Industry-specific AI agent solutions.
+- [Get First Client](/get-first-client): Playbook for landing your first paying client.
+- [Appointment Funnels](/appoint-funnels): High-converting appointment funnels.
+- [Tools](/tools): Tools and platforms you'll master.
+- [Results](/results): Student wins and case studies.
+- [Pricing](/pricing): Starter, Professional, and Elite plans.
+- [Contact](/contact): Reach us on WhatsApp or email.
+
+## Optional
+
+- [Student Onboarding](/student-form): Onboarding form for enrolled students.
+- [Privacy Policy](/privacy-policy): Privacy and refund policy.
