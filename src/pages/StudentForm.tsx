@@ -23,6 +23,7 @@ const schema = z.object({
   current_monthly_income: z.string().trim().min(1, "Required").max(100),
   goals: z.string().trim().min(1, "Required").max(1000),
   income_goal: z.string().trim().min(1, "Required").max(100),
+  free_hours: z.string().trim().min(1, "Required").max(50),
   plan: z.string().trim().min(1, "Please select a plan").max(100),
 });
 
