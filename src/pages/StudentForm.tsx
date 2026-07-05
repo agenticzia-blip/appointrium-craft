@@ -124,7 +124,7 @@ const StudentForm = () => {
           current_monthly_income: payload.current_monthly_income,
           goals: payload.goals,
           income_goal: payload.income_goal,
-          background_details: `Plan: ${payload.plan}`,
+          background_details: `Plan: ${payload.plan} | Free Hours/Day: ${payload.free_hours}`,
         })
         .then(({ error }) => {
           if (error) console.error("Database save failed", error);
