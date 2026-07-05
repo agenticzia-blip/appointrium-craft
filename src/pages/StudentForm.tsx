@@ -97,6 +97,7 @@ const StudentForm = () => {
       current_monthly_income: parsed.data.current_monthly_income,
       goals: parsed.data.goals,
       income_goal: parsed.data.income_goal,
+      free_hours: parsed.data.free_hours,
       plan: parsed.data.plan,
       submitted_at: new Date().toISOString(),
       source: "student_onboarding_form",
