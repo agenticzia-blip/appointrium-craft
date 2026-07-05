@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ChatBot from "./ChatBot";
 import ParticlesBackground from "./ParticlesBackground";
+import SEO from "./SEO";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { pathname } = useLocation();
@@ -15,6 +16,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div className="relative min-h-screen scroll-smooth">
+      <SEO />
       <div className="top-light" />
       <ParticlesBackground />
       <Navbar minimal={isLanding} />
