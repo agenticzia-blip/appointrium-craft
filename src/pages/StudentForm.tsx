@@ -53,6 +53,7 @@ const fields: { key: keyof FormState; label: string; type?: string; textarea?: b
   { key: "current_monthly_income", label: "Current Monthly Income" },
   { key: "goals", label: "Goals", textarea: true },
   { key: "income_goal", label: "Monthly Income Goal After Completing This Course" },
+  { key: "free_hours", label: "Free Hours a Day You Can Give to This Work" },
 ];
 
 const StudentForm = () => {
