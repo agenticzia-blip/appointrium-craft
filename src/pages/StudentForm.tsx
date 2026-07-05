@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Copy, CheckCircle2 } from "lucide-react";
+import { Copy, CheckCircle2, Check } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const WEBHOOK_URL = "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab";
