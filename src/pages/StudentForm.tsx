@@ -39,6 +39,7 @@ const initial: FormState = {
   current_monthly_income: "",
   goals: "",
   income_goal: "",
+  free_hours: "",
   plan: "",
 };
 
