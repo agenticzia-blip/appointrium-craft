@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Copy, CheckCircle2 } from "lucide-react";
+import { Copy, CheckCircle2, Check } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const WEBHOOK_URL = "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab";
@@ -23,6 +23,7 @@ const schema = z.object({
   current_monthly_income: z.string().trim().min(1, "Required").max(100),
   goals: z.string().trim().min(1, "Required").max(1000),
   income_goal: z.string().trim().min(1, "Required").max(100),
+  free_hours: z.string().trim().min(1, "Required").max(50),
   plan: z.string().trim().min(1, "Please select a plan").max(100),
 });
 
@@ -38,6 +39,7 @@ const initial: FormState = {
   current_monthly_income: "",
   goals: "",
   income_goal: "",
+  free_hours: "",
   plan: "",
 };
 
@@ -51,6 +53,7 @@ const fields: { key: keyof FormState; label: string; type?: string; textarea?: b
   { key: "current_monthly_income", label: "Current Monthly Income" },
   { key: "goals", label: "Goals", textarea: true },
   { key: "income_goal", label: "Monthly Income Goal After Completing This Course" },
+  { key: "free_hours", label: "Free Hours a Day You Can Give to This Work" },
 ];
 
 const StudentForm = () => {
@@ -94,6 +97,7 @@ const StudentForm = () => {
       current_monthly_income: parsed.data.current_monthly_income,
       goals: parsed.data.goals,
       income_goal: parsed.data.income_goal,
+      free_hours: parsed.data.free_hours,
       plan: parsed.data.plan,
       submitted_at: new Date().toISOString(),
       source: "student_onboarding_form",
@@ -120,7 +124,7 @@ const StudentForm = () => {
           current_monthly_income: payload.current_monthly_income,
           goals: payload.goals,
           income_goal: payload.income_goal,
-          background_details: `Plan: ${payload.plan}`,
+          background_details: `Plan: ${payload.plan} | Free Hours/Day: ${payload.free_hours}`,
         })
         .then(({ error }) => {
           if (error) console.error("Database save failed", error);
@@ -216,25 +220,36 @@ const StudentForm = () => {
                 <Label className="text-base font-display font-semibold">Which plan did you take admission in?</Label>
                 <p className="text-xs text-muted-foreground">Select the course plan you've enrolled / paying for.</p>
                 <div className="grid grid-cols-1 gap-2 pt-1">
-                  {PLAN_OPTIONS.map((p) => (
-                    <label
-                      key={p}
-                      className={`flex items-center gap-3 cursor-pointer rounded-lg border px-4 py-3 transition-colors ${
-                        form.plan === p ? "border-primary bg-primary/10" : "border-border hover:border-primary/40"
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="plan"
-                        value={p}
-                        checked={form.plan === p}
-                        onChange={(e) => update("plan", e.target.value)}
-                        className="accent-primary"
-                        required
-                      />
-                      <span className="text-sm font-medium">{p}</span>
-                    </label>
-                  ))}
+                  {PLAN_OPTIONS.map((p) => {
+                    const active = form.plan === p;
+                    return (
+                      <label
+                        key={p}
+                        className={`flex items-center gap-3 cursor-pointer rounded-lg border px-4 py-3 transition-colors ${
+                          active ? "border-primary bg-primary/10" : "border-border hover:border-primary/40"
+                        }`}
+                      >
+                        <span
+                          className={`flex items-center justify-center w-5 h-5 rounded-md border shrink-0 transition-colors ${
+                            active ? "bg-primary border-primary text-primary-foreground" : "border-border bg-transparent"
+                          }`}
+                          aria-hidden
+                        >
+                          {active && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                        </span>
+                        <input
+                          type="radio"
+                          name="plan"
+                          value={p}
+                          checked={active}
+                          onChange={(e) => update("plan", e.target.value)}
+                          className="sr-only"
+                          required
+                        />
+                        <span className="text-sm font-medium">{p}</span>
+                      </label>
+                    );
+                  })}
                 </div>
               </div>
 
