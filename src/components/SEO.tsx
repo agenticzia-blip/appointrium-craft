@@ -12,9 +12,9 @@ type Meta = {
 
 const META: Record<string, Meta> = {
   "/": {
-    title: "Appointrium Academy — Land Your First AI Client in 90 Days",
+    title: "Appointrium Academy — Land Your First AI Client in 60 Days",
     description:
-      "Master AI automation, N8N, and AI agents. Land your first paying client in 90 days — or you don't pay.",
+      "Master AI automation, N8N, and AI agents. Land your first paying client in 60 days — or you don't pay.",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -29,10 +29,10 @@ const META: Record<string, Meta> = {
         },
         {
           "@type": "Question",
-          name: "What is the 90-day client guarantee?",
+          name: "What is the 60-day client guarantee?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Land your first AI automation client within 90 days of finishing the course, or you don't pay.",
+            text: "Land your first AI automation client within 60 days of finishing the course, or you don't pay.",
           },
         },
         {
@@ -146,7 +146,7 @@ const META: Record<string, Meta> = {
   "/pricing": {
     title: "Pricing — Appointrium Academy",
     description:
-      "Starter, Professional, and Elite plans — plus the 90-day first-client guarantee.",
+      "Starter, Professional, and Elite plans — plus the 60-day first-client guarantee.",
   },
   "/contact": {
     title: "Contact — Appointrium Academy",
@@ -154,7 +154,7 @@ const META: Record<string, Meta> = {
   },
   "/landing": {
     title: "Appointrium Academy — Start Now",
-    description: "Land your first AI automation client in 90 days with Appointrium Academy.",
+    description: "Land your first AI automation client in 60 days with Appointrium Academy.",
   },
   "/student-form": {
     title: "Student Onboarding — Appointrium Academy",
@@ -169,7 +169,7 @@ const META: Record<string, Meta> = {
 const FALLBACK: Meta = {
   title: "Appointrium Academy — Master AI Automation",
   description:
-    "Master AI systems and land your first client in 90 days — or you don't pay.",
+    "Master AI systems and land your first client in 60 days — or you don't pay.",
 };
 
 const SEO = () => {

@@ -1,10 +1,10 @@
 # Appointrium Academy
 
-> Appointrium Academy teaches AI automation, N8N workflows, AI agents, voice agents, and WhatsApp automation — with a 90-day guarantee to land your first client.
+> Appointrium Academy teaches AI automation, N8N workflows, AI agents, voice agents, and WhatsApp automation — with a 60-day guarantee to land your first client.
 
 ## Pages
 
-- [Home](/): Overview of Appointrium Academy and the 90-day first-client guarantee.
+- [Home](/): Overview of Appointrium Academy and the 60-day first-client guarantee.
 - [About](/about): Who we are and how the academy works.
 - [Why AI](/why-ai): Why AI automation is a high-demand skill right now.
 - [What Is AI Automation](/what-is-ai-automation): Beginner-friendly intro to AI automation.
