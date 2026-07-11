@@ -12,7 +12,7 @@ type Meta = {
 
 const META: Record<string, Meta> = {
   "/": {
-    title: "Appointrium Academy — Land Your First AI Client in 90 Days",
+    title: "Appointrium Academy — Land Your First AI Client in 60 Days",
     description:
       "Master AI automation, N8N, and AI agents. Land your first paying client in 60 days — or you don't pay.",
     jsonLd: {
