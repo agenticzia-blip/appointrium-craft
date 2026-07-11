@@ -9,7 +9,7 @@ const LandingPage = () => {
         <div className="container-narrow text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8">
-              <span className="text-sm font-display font-medium text-foreground">90-Days Client Guarantee</span>
+              <span className="text-sm font-display font-medium text-foreground">60-Days Client Guarantee</span>
               <span>⚡</span>
             </div>
           </ScrollReveal>
@@ -37,7 +37,7 @@ const LandingPage = () => {
           </ScrollReveal>
           <ScrollReveal delay={400}>
             <p className="mt-10 text-xs uppercase tracking-[0.25em] text-muted-foreground font-display">
-              90-DAYS RESULTS GUARANTEE OR $0 COST
+              60-DAYS RESULTS GUARANTEE OR $0 COST
             </p>
           </ScrollReveal>
         </div>
