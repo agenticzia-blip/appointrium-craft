@@ -157,8 +157,8 @@ const META: Record<string, Meta> = {
     description: "Land your first AI automation client in 60 days with Appointrium Academy.",
   },
   "/student-form": {
-    title: "Student Onboarding — Appointrium Academy",
-    description: "Onboarding form for enrolled Appointrium Academy students.",
+    title: "Student Enrollment — Appointrium Academy",
+    description: "Apply to enroll at Appointrium Academy. Fill in your details and receive your unique Student ID.",
   },
   "/privacy-policy": {
     title: "Privacy Policy — Appointrium Academy",

@@ -24,5 +24,5 @@
 
 ## Optional
 
-- [Student Onboarding](/student-form): Onboarding form for enrolled students.
+- [Student Enrollment](/student-form): Application form for students who want to enroll.
 - [Privacy Policy](/privacy-policy): Privacy and refund policy.
