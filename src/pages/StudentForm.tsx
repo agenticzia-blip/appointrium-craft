@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { Copy, CheckCircle2, Check } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const WEBHOOK_URL = "https://ziauddinshah32.app.n8n.cloud/webhook/63225e77-424c-4cf4-bdf1-2efad9d787ab";
+const WEBHOOK_URL = "https://ziauddinshah32.app.n8n.cloud/webhook/ziaishave$12000before8sep";
 
 const PLAN_OPTIONS = ["Starter (PKR 10,000)", "Professional (PKR 30,000)", "Elite (PKR 50,000)"] as const;
 
