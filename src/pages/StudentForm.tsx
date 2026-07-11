@@ -100,7 +100,7 @@ const StudentForm = () => {
       free_hours: parsed.data.free_hours,
       plan: parsed.data.plan,
       submitted_at: new Date().toISOString(),
-      source: "student_onboarding_form",
+      source: "student_enrollment_form",
     };
 
     try {
@@ -155,10 +155,10 @@ const StudentForm = () => {
         <ScrollReveal>
           <div className="text-center mb-10">
             <h1 className="text-3xl md:text-5xl font-display font-bold mb-4">
-              Student <span className="serif-italic text-gradient">Onboarding</span>
+              Student <span className="serif-italic text-gradient">Enrollment</span>
             </h1>
             <p className="text-muted-foreground">
-              Fill the onboarding form below. You'll receive your unique Student ID — copy and send it to us to complete your onboarding.
+              Fill in your details below to apply for enrollment. You'll receive your unique Student ID — copy and send it to us on WhatsApp or email to confirm your seat.
             </p>
           </div>
         </ScrollReveal>
@@ -167,9 +167,9 @@ const StudentForm = () => {
           <ScrollReveal>
             <div className="glass-strong rounded-2xl p-8 md:p-12 text-center glow">
               <CheckCircle2 className="w-14 h-14 mx-auto mb-4 text-primary" />
-              <h2 className="text-2xl font-display font-bold mb-2">You're In!</h2>
+              <h2 className="text-2xl font-display font-bold mb-2">Application Submitted!</h2>
               <p className="text-muted-foreground mb-6">
-                Here's your unique Student ID. Copy it and send it to us on WhatsApp / email to confirm your spot.
+                Here's your unique Student ID. Copy it and send it to us on WhatsApp or email to confirm your enrollment.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
                 <code className="glass px-5 py-3 rounded-lg text-base md:text-2xl font-display font-bold tracking-widest break-all">
@@ -186,7 +186,7 @@ const StudentForm = () => {
                 }}
                 variant="hero-outline"
               >
-                Submit another onboarding
+                Submit another application
               </Button>
             </div>
           </ScrollReveal>
@@ -217,8 +217,8 @@ const StudentForm = () => {
               ))}
 
               <div className="space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-5">
-                <Label className="text-base font-display font-semibold">Which plan did you take admission in?</Label>
-                <p className="text-xs text-muted-foreground">Select the course plan you've enrolled / paying for.</p>
+                <Label className="text-base font-display font-semibold">Which plan do you want to enroll in?</Label>
+                <p className="text-xs text-muted-foreground">Select the course plan you're applying for.</p>
                 <div className="grid grid-cols-1 gap-2 pt-1">
                   {PLAN_OPTIONS.map((p) => {
                     const active = form.plan === p;
@@ -254,7 +254,7 @@ const StudentForm = () => {
               </div>
 
               <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>
-                {loading ? "Submitting..." : "Get My Student ID"}
+                {loading ? "Submitting..." : "Submit Enrollment Application"}
               </Button>
             </form>
           </ScrollReveal>
