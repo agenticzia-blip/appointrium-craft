@@ -1,64 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-import { CheckCircle, Crown, Zap, Gem } from "lucide-react";
-
-const plans = [
-  {
-    name: "Starter",
-    price: "10,000",
-    icon: Zap,
-    recommended: false,
-    features: [
-      "N8N Masterclass",
-      "Client Hunting Program",
-      "Full Chat Support",
-      "Basics of GoHighLevel",
-      "AI Chatbot",
-      "MCP Connections",
-      "5 Live Agents Build",
-    ],
-  },
-  {
-    name: "Professional",
-    price: "30,000",
-    icon: Crown,
-    recommended: true,
-    features: [
-      "Everything in Starter",
-      "N8N Self Host Free Method",
-      "AI Agents Course",
-      "Voice Agents Program",
-      "WhatsApp Automation",
-      "Solution-Based AI Agents",
-      "Live Classes & Mentorship",
-      "Appoint Funnels System",
-    ],
-  },
-  {
-    name: "Elite",
-    price: "50,000",
-    icon: Gem,
-    recommended: false,
-    features: [
-      "All Professional Features",
-      "Full Business Launch",
-      "Website Design for Your Agency",
-      "Handle First 10 Sales Calls",
-      "Trained Use of Appoint Funnels Testimonials",
-      "One Auto Dialer for Dialing Calls",
-      "Use Our Cold Calling & Cold Emailing Scripts",
-      "1-on-1 Weekly Coaching Calls",
-      "Done-For-You Templates",
-      "White-Label Resources",
-      "Agency Building Blueprint",
-      "Lifetime Updates",
-      "Claude Code Masterclass",
-      "Claude Code Free Subscription",
-      "60-Days 2 Clients Guaranteed",
-    ],
-  },
-];
+import { CheckCircle, Crown } from "lucide-react";
+import { pricingPlans } from "@/data/pricingPlans";
 
 const PricingSection = () => (
   <section className="section-padding text-center">
@@ -73,7 +17,7 @@ const PricingSection = () => (
       </ScrollReveal>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {plans.map((plan, i) => (
+        {pricingPlans.map((plan, i) => (
           <ScrollReveal key={plan.name} delay={i * 120}>
             <div
               className={`glass rounded-2xl p-8 text-left relative h-full flex flex-col ${
@@ -101,7 +45,7 @@ const PricingSection = () => (
                 ))}
               </div>
               <Button asChild variant={plan.recommended ? "hero" : "hero-outline"} className="w-full">
-                <a href="https://wa.me/923303120032" target="_blank" rel="noopener noreferrer">Apply Now</a>
+                <Link to={`/payment?plan=${plan.slug}`}>Choose {plan.name}</Link>
               </Button>
             </div>
           </ScrollReveal>
@@ -110,9 +54,9 @@ const PricingSection = () => (
 
       <ScrollReveal delay={300}>
         <div className="glass-strong rounded-2xl p-8 mt-12 glow max-w-2xl mx-auto text-center">
-          <p className="text-xl font-display font-semibold mb-2">Our Bold Promise</p>
+          <p className="text-xl font-display font-semibold mb-2">Choose the Support You Need</p>
           <p className="text-muted-foreground">
-            Get your first AI automation client in 60 days or you don't pay.
+            Starter is self-paced. Professional and Elite include package-specific 45-day client outcomes.
           </p>
         </div>
       </ScrollReveal>

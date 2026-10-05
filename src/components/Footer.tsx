@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
         <div>
-          <h3 className="font-display font-bold text-lg mb-3">Appointrium Academy</h3>
+          <h3 className="font-display font-bold text-lg mb-3">AgenticMyze</h3>
           <p className="text-muted-foreground text-sm leading-relaxed">
             Master AI automation, build real client systems, and get paid. Your complete academy for the AI economy.
           </p>
@@ -34,7 +34,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-border pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Appointrium Academy. All rights reserved.
+        © {new Date().getFullYear()} AgenticMyze. All rights reserved.
       </div>
     </div>
   </footer>
