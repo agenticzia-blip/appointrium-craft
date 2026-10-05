@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   { name: "Ahmed R.", result: "Landed 3 clients in first month", quote: "The cold emailing engine alone was worth 10x the investment. I had paying clients within weeks." },
-  { name: "Sara K.", result: "Built a 6-figure AI agency", quote: "Appointrium gave me the exact systems I needed. The voice agents module changed everything for my business." },
+  { name: "Sara K.", result: "Built a 6-figure AI agency", quote: "AgenticMyze gave me the exact systems I needed. The voice agents module changed everything for my business." },
   { name: "Usman M.", result: "Closed first client in 14 days", quote: "I went from knowing nothing about AI to running automations for a real estate agency. The mentorship was incredible." },
   { name: "Fatima A.", result: "Automated entire clinic workflow", quote: "I built a complete patient intake and appointment system using N8N. The clinic owner couldn't believe it." },
   { name: "Ali H.", result: "Earning $3K/month from AI services", quote: "The solution-based approach made it so easy to pitch clients. They see exactly what they're getting." },

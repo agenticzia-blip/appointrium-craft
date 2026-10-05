@@ -52,8 +52,8 @@ const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 border-b border-border">
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
         <Link to="/" className="flex items-center gap-1">
-          <img src={logo} alt="Appointruim" className="h-16 w-auto object-contain" />
-          <span className="font-['Poppins'] font-bold text-base text-foreground tracking-tight mt-0.5">Appointruim.</span>
+          <img src={logo} alt="AgenticMyze" className="h-16 w-auto object-contain" />
+          <span className="font-['Poppins'] font-bold text-base text-foreground tracking-tight mt-0.5">AgenticMyze</span>
         </Link>
 
         {/* Desktop */}

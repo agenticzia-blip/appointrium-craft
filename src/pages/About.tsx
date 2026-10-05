@@ -5,7 +5,7 @@ import { Users, Award, Lightbulb } from "lucide-react";
 
 const About = () => (
   <div>
-    <PageHero title="About" highlight="Appointrium Academy" subtitle="We exist to make AI automation accessible, practical, and profitable for everyone." />
+    <PageHero title="About" highlight="AgenticMyze" subtitle="We exist to make AI automation accessible, practical, and profitable for everyone." />
     <section className="section-padding pt-8">
       <div className="container-narrow">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -27,7 +27,7 @@ const About = () => (
           <div className="glass-strong rounded-2xl p-10 mt-12 text-center">
             <h3 className="font-display font-bold text-xl mb-4">Our Mission</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Appointrium Academy was founded to bridge the gap between AI technology and real business results. We don't teach theory — we teach systems that generate revenue. From N8N workflows to voice agents to full client acquisition engines, everything is built for action.
+              AgenticMyze was founded to bridge the gap between AI technology and real business results. We don't teach theory — we teach systems that generate revenue. From N8N workflows to voice agents to full client acquisition engines, everything is built for action.
             </p>
           </div>
         </ScrollReveal>

@@ -23,6 +23,7 @@ import WhatIsAIAutomation from "./pages/WhatIsAIAutomation";
 import Contact from "./pages/Contact";
 import LandingPage from "./pages/LandingPage";
 import StudentForm from "./pages/StudentForm";
+import Payment from "./pages/Payment";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
@@ -57,6 +58,7 @@ const App = () => (
             
             <Route path="/landing" element={<LandingPage />} />
             <Route path="/student-form" element={<StudentForm />} />
+            <Route path="/payment" element={<Payment />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

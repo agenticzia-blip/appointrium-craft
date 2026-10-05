@@ -27,11 +27,11 @@ const courses = [
 
 const faqs = [
 { q: "Do I need coding experience?", a: "No. Our courses are designed for complete beginners. We teach you everything from scratch using no-code and low-code tools like N8N." },
-{ q: "How long does it take to get results?", a: "Most students land their first client within 30–60 days. Our bold promise guarantees it — or you don't pay." },
+{ q: "How long does it take to get results?", a: "Professional includes 1 client guaranteed in 45 days, while Elite includes 2 clients guaranteed in 45 days. Starter has no client guarantee." },
 { q: "What tools will I learn?", a: "N8N, AI agents, voice calling systems, WhatsApp automation, GoHighLevel, and complete funnel-building systems." },
-{ q: "Is this a SaaS product?", a: "No. Appointrium Academy is a course-based program. You learn real skills, build real systems, and get real clients." },
+{ q: "Is this a SaaS product?", a: "No. AgenticMyze is a course-based program. You learn real skills, build real systems, and get real clients." },
 { q: "Can I access courses on mobile?", a: "Yes. All course content is accessible on any device, anytime." },
-{ q: "What is the refund policy?", a: "Get your first AI automation client in 60 days or you don't pay. That's our bold promise." }];
+{ q: "What is the refund policy?", a: "The Professional package includes a refund guarantee if results do not come. Package terms are shown clearly on the pricing page." }];
 
 
 const Index = () => {
@@ -42,7 +42,7 @@ const Index = () => {
         <div className="container-narrow text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8">
-              <span className="text-sm font-display font-medium text-foreground">60-Days Client Guarantee</span>
+              <span className="text-sm font-display font-medium text-foreground">Up to 2 Clients in 45 Days</span>
               <span>⚡</span>
             </div>
           </ScrollReveal>
@@ -69,7 +69,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <p className="mt-10 text-xs uppercase tracking-[0.25em] text-muted-foreground font-display">60-DAYS RESULTS GUARANTEE OR $0 COST
+            <p className="mt-10 text-xs uppercase tracking-[0.25em] text-muted-foreground font-display">PACKAGE-SPECIFIC 45-DAY CLIENT OUTCOMES
 
             </p>
           </ScrollReveal>
@@ -155,13 +155,13 @@ const Index = () => {
             <div className="glass-strong rounded-2xl p-10 md:p-16 glow">
               <BookOpen className="w-12 h-12 mx-auto mb-6 opacity-60" />
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Our <span className="serif-italic text-gradient">Bold Promise</span>
+                Results Built Into <span className="serif-italic text-gradient">Your Package</span>
               </h2>
               <p className="text-xl md:text-2xl font-display font-semibold mb-4">
-                Get your first AI automation client in 60 days or you don't pay.
+                Professional includes 1 client in 45 days. Elite includes 2 clients in 45 days.
               </p>
               <p className="text-muted-foreground max-w-lg mx-auto mb-2">
-                We're so confident in this program that we put our money where our mouth is.
+                Choose the support level that matches how quickly you want to launch.
               </p>
             </div>
           </ScrollReveal>

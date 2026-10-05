@@ -109,7 +109,7 @@ const ChatBot = () => {
         <div className="fixed bottom-24 right-6 z-50 w-[340px] sm:w-[380px] h-[460px] glass border border-border rounded-2xl flex flex-col overflow-hidden shadow-2xl">
           {/* Header */}
           <div className="px-4 py-3 border-b border-border bg-foreground/5">
-            <p className="font-display font-semibold text-sm">Appointrium Assistant</p>
+            <p className="font-display font-semibold text-sm">AgenticMyze Assistant</p>
             <p className="text-xs text-muted-foreground">Ask anything about our courses</p>
           </div>
 
@@ -117,7 +117,7 @@ const ChatBot = () => {
           <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-3">
             {messages.length === 0 && (
               <div className="text-center text-muted-foreground text-xs mt-8">
-                👋 Hi! Ask me anything about Appointrium Academy.
+                👋 Hi! Ask me anything about AgenticMyze.
               </div>
             )}
             {messages.map((m, i) => (
