@@ -61,7 +61,7 @@ const Payment = () => {
       toast.error(parsed.error.errors[0]?.message ?? "Please check your details.");
       return;
     }
-    setConfirmedDetails(parsed.data);
+    setConfirmedDetails({ fullName: parsed.data.fullName, mobile: parsed.data.mobile });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

@@ -1,7 +1,7 @@
 # Roadmap
 
-- [ ] Update pricing packages and guarantees
-- [ ] Rebrand visible content to AgenticMyze
-- [ ] Add the pricing-to-payment WhatsApp flow
-- [ ] Update SEO and sitemap content
-- [ ] Verify desktop and mobile flows
+- [x] Update pricing packages and guarantees
+- [x] Rebrand visible content to AgenticMyze
+- [x] Add the pricing-to-payment WhatsApp flow
+- [x] Update SEO and sitemap content
+- [x] Verify desktop and mobile flows

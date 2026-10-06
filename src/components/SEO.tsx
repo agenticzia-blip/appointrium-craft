@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const SITE = "https://appointrium-craft.lovable.app";
-const BRAND = "Appointrium Academy";
+const BRAND = "AgenticMyze";
 
 type Meta = {
   title: string;
@@ -12,9 +12,9 @@ type Meta = {
 
 const META: Record<string, Meta> = {
   "/": {
-    title: "Appointrium Academy — Land Your First AI Client in 60 Days",
+    title: "AgenticMyze — Build AI Skills and Win Clients",
     description:
-      "Master AI automation, N8N, and AI agents. Land your first paying client in 60 days — or you don't pay.",
+      "Master AI automation, N8N, and AI agents with plans ranging from recorded lessons to 45-day client outcomes.",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -24,15 +24,15 @@ const META: Record<string, Meta> = {
           name: "Do I need coding experience to join?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No. Appointrium Academy is designed for beginners — no prior coding required.",
+            text: "No. AgenticMyze is designed for beginners — no prior coding required.",
           },
         },
         {
           "@type": "Question",
-          name: "What is the 60-day client guarantee?",
+          name: "Which packages include a client guarantee?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Land your first AI automation client within 60 days of finishing the course, or you don't pay.",
+            text: "Professional includes 1 client guaranteed in 45 days and Elite includes 2 clients guaranteed in 45 days. Starter has no client guarantee.",
           },
         },
         {
@@ -40,34 +40,34 @@ const META: Record<string, Meta> = {
           name: "How much does it cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Plans start at PKR 4,000 (Starter). Professional is PKR 12,000 and Elite is PKR 16,000.",
+            text: "Plans start at PKR 10,000 for Starter. Professional is PKR 30,000 and Elite is PKR 60,000.",
           },
         },
       ],
     },
   },
   "/about": {
-    title: "About — Appointrium Academy",
+    title: "About — AgenticMyze",
     description:
-      "Learn how Appointrium Academy helps students master AI automation and secure their first paying client.",
+      "Learn how AgenticMyze helps students master AI automation and secure paying clients.",
   },
   "/why-ai": {
-    title: "Why AI Automation — Appointrium Academy",
+    title: "Why AI Automation — AgenticMyze",
     description:
       "Why AI automation is one of the highest-demand freelance skills in 2026 and beyond.",
   },
   "/what-is-ai-automation": {
-    title: "What Is AI Automation? — Appointrium Academy",
+    title: "What Is AI Automation? — AgenticMyze",
     description:
       "A beginner-friendly explainer on AI automation, agents, and how businesses use them today.",
   },
   "/courses": {
-    title: "Courses — Appointrium Academy",
+    title: "Courses — AgenticMyze",
     description:
-      "Explore every Appointrium course: N8N, AI Agents, Voice Agents, WhatsApp Automation and more.",
+      "Explore every AgenticMyze course: N8N, AI Agents, Voice Agents, WhatsApp Automation and more.",
   },
   "/n8n-course": {
-    title: "N8N Masterclass — Appointrium Academy",
+    title: "N8N Masterclass — AgenticMyze",
     description:
       "Master N8N workflow automation from zero to production and build systems clients pay for.",
     jsonLd: {
@@ -80,7 +80,7 @@ const META: Record<string, Meta> = {
     },
   },
   "/ai-agents-course": {
-    title: "AI Agents Course — Appointrium Academy",
+    title: "AI Agents Course — AgenticMyze",
     description:
       "Build intelligent AI agents that solve real business problems and generate recurring revenue.",
     jsonLd: {
@@ -93,7 +93,7 @@ const META: Record<string, Meta> = {
     },
   },
   "/voice-agents": {
-    title: "Voice Agents — Appointrium Academy",
+    title: "Voice Agents — AgenticMyze",
     description:
       "Build AI voice agents for calls, booking, and customer support using industry-standard tools.",
     jsonLd: {
@@ -105,7 +105,7 @@ const META: Record<string, Meta> = {
     },
   },
   "/whatsapp-automation": {
-    title: "WhatsApp Automation — Appointrium Academy",
+    title: "WhatsApp Automation — AgenticMyze",
     description:
       "Automate sales, support, and onboarding on WhatsApp using AI agents and workflows.",
     jsonLd: {
@@ -117,59 +117,63 @@ const META: Record<string, Meta> = {
     },
   },
   "/live-classes": {
-    title: "Live Classes — Appointrium Academy",
+    title: "Live Classes — AgenticMyze",
     description: "Live, mentor-led sessions to accelerate your AI automation journey.",
   },
   "/solution-agents": {
-    title: "Solution Agents — Appointrium Academy",
+    title: "Solution Agents — AgenticMyze",
     description: "Industry-specific AI agents that solve real problems for real businesses.",
   },
   "/get-first-client": {
-    title: "Get Your First Client — Appointrium Academy",
+    title: "Get Your First Client — AgenticMyze",
     description:
-      "The exact playbook Appointrium students use to land their first paying AI automation client.",
+      "The exact playbook AgenticMyze students use to land their first paying AI automation client.",
   },
   "/appoint-funnels": {
-    title: "Appointment Funnels — Appointrium Academy",
+    title: "Appointment Funnels — AgenticMyze",
     description:
       "Build high-converting appointment funnels for AI automation service providers.",
   },
   "/tools": {
-    title: "Tools You'll Master — Appointrium Academy",
+    title: "Tools You'll Master — AgenticMyze",
     description:
       "Industry-standard tools and platforms behind every modern AI automation business.",
   },
   "/results": {
-    title: "Student Results — Appointrium Academy",
-    description: "Real wins from Appointrium Academy students landing paying AI clients.",
+    title: "Student Results — AgenticMyze",
+    description: "Real wins from AgenticMyze students landing paying AI clients.",
   },
   "/pricing": {
-    title: "Pricing — Appointrium Academy",
+    title: "Pricing — AgenticMyze",
     description:
-      "Starter, Professional, and Elite plans — plus the 60-day first-client guarantee.",
+      "Compare AgenticMyze Starter, Professional, and Elite plans, including package-specific 45-day client outcomes.",
   },
   "/contact": {
-    title: "Contact — Appointrium Academy",
-    description: "Reach Appointrium Academy on WhatsApp or email — no forms, just real people.",
+    title: "Contact — AgenticMyze",
+    description: "Reach AgenticMyze on WhatsApp or email — no forms, just real people.",
   },
   "/landing": {
-    title: "Appointrium Academy — Start Now",
-    description: "Land your first AI automation client in 60 days with Appointrium Academy.",
+    title: "AgenticMyze — Start Now",
+    description: "Build client-ready AI automation skills with AgenticMyze.",
   },
   "/student-form": {
-    title: "Student Enrollment — Appointrium Academy",
-    description: "Apply to enroll at Appointrium Academy. Fill in your details and receive your unique Student ID.",
+    title: "Student Enrollment — AgenticMyze",
+    description: "Apply to enroll at AgenticMyze. Fill in your details and receive your unique Student ID.",
+  },
+  "/payment": {
+    title: "Payment Details — AgenticMyze",
+    description: "Complete your AgenticMyze package payment and send your receipt for confirmation.",
   },
   "/privacy-policy": {
-    title: "Privacy Policy — Appointrium Academy",
-    description: "Privacy, refund, and course flexibility policies for Appointrium Academy.",
+    title: "Privacy Policy — AgenticMyze",
+    description: "Privacy, refund, and course flexibility policies for AgenticMyze.",
   },
 };
 
 const FALLBACK: Meta = {
-  title: "Appointrium Academy — Master AI Automation",
+  title: "AgenticMyze — Master AI Automation",
   description:
-    "Master AI systems and land your first client in 60 days — or you don't pay.",
+    "Master AI systems, build client-ready workflows, and choose the support package that fits your goals.",
 };
 
 const SEO = () => {

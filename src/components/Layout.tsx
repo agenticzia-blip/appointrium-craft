@@ -9,6 +9,7 @@ import SEO from "./SEO";
 const Layout = ({ children }: { children: ReactNode }) => {
   const { pathname } = useLocation();
   const isLanding = pathname === "/landing";
+  const isPayment = pathname === "/payment";
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,7 +23,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Navbar minimal={isLanding} />
       <main className="relative z-10">{children}</main>
       {!isLanding && <Footer />}
-      <ChatBot />
+      {!isPayment && <ChatBot />}
     </div>
   );
 };
