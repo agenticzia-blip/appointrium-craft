@@ -1,10 +1,10 @@
-# Appointrium Academy
+# AgenticMyze
 
-> Appointrium Academy teaches AI automation, N8N workflows, AI agents, voice agents, and WhatsApp automation — with a 60-day guarantee to land your first client.
+> AgenticMyze teaches AI automation, N8N workflows, AI agents, voice agents, and WhatsApp automation with package-specific client support.
 
 ## Pages
 
-- [Home](/): Overview of Appointrium Academy and the 60-day first-client guarantee.
+- [Home](/): Overview of AgenticMyze and its AI automation programs.
 - [About](/about): Who we are and how the academy works.
 - [Why AI](/why-ai): Why AI automation is a high-demand skill right now.
 - [What Is AI Automation](/what-is-ai-automation): Beginner-friendly intro to AI automation.
@@ -20,6 +20,7 @@
 - [Tools](/tools): Tools and platforms you'll master.
 - [Results](/results): Student wins and case studies.
 - [Pricing](/pricing): Starter, Professional, and Elite plans.
+- [Payment](/payment): Package payment instructions and WhatsApp receipt confirmation.
 - [Contact](/contact): Reach us on WhatsApp or email.
 
 ## Optional
