@@ -9,8 +9,24 @@ export type PricingPlan = {
   amount: number;
   icon: LucideIcon;
   recommended: boolean;
+  guaranteedClients: number;
+  guaranteeDays: number | null;
+  refundGuarantee: boolean;
+  recordedLectures: number;
   features: string[];
 };
+
+export const coreProgramFeatures = [
+  "Niche Selection Based on Business Pain Points",
+  "Grand Slam Offer: An Offer People Can't Reject",
+  "AI Systems Development",
+  "Funnel Building",
+  "Pricing Models That Retain Clients",
+  "Client Acquisition Systems Building",
+  "Client Closing Masterclass",
+  "20+ Results & Testimonials Access",
+  "n8n Learning for AI Systems (Supporting Skill)",
+];
 
 export const pricingPlans: PricingPlan[] = [
   {
@@ -20,14 +36,14 @@ export const pricingPlans: PricingPlan[] = [
     amount: 10000,
     icon: Zap,
     recommended: false,
+    guaranteedClients: 0,
+    guaranteeDays: null,
+    refundGuarantee: false,
+    recordedLectures: 20,
     features: [
-      "20 Recorded Lectures",
-      "N8N Masterclass",
-      "Client Hunting Program",
+      "Full Client Acquisition Program — 20 Recorded Lectures",
+      ...coreProgramFeatures,
       "Full Chat Support",
-      "Basics of GoHighLevel",
-      "AI Chatbot",
-      "MCP Connections",
       "No Done-For-You System Delivery",
       "No Client Guarantee",
       "No Live Classes",
@@ -40,13 +56,17 @@ export const pricingPlans: PricingPlan[] = [
     amount: 30000,
     icon: Crown,
     recommended: true,
+    guaranteedClients: 1,
+    guaranteeDays: 45,
+    refundGuarantee: true,
+    recordedLectures: 20,
     features: [
-      "Everything in Starter",
+      "All Starter Course Content & Recorded Lectures",
       "Full Done-For-You Program",
       "1 Client Guaranteed in 45 Days",
       "Refund Guarantee If Results Don't Come",
       "Free N8N Yearly Account",
-      "20+ AppointFunnels Real Results Access",
+      "20+ AppointFunnels Results & Testimonials Access",
       "5+ Tool Stack Worth $400+: Apollo, Claude Code, N8N, Instantly, GoHighLevel & Retell AI",
       "Cold SMS Systems",
       "20% Revenue Share per Converted Client",
@@ -60,9 +80,14 @@ export const pricingPlans: PricingPlan[] = [
     amount: 60000,
     icon: Gem,
     recommended: false,
+    guaranteedClients: 2,
+    guaranteeDays: 45,
+    refundGuarantee: true,
+    recordedLectures: 20,
     features: [
-      "Everything in Professional",
+      "All Professional Content, Tools & Mentorship",
       "2 Clients Guaranteed in 45 Days",
+      "Refund Guarantee If Results Don't Come",
       "20% Revenue Share per Converted Client",
       "Full Business Launch",
       "Website Design for Your Agency",
