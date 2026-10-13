@@ -15,6 +15,7 @@ const entries: Entry[] = [
   { path: "/why-ai", changefreq: "monthly", priority: "0.7" },
   { path: "/what-is-ai-automation", changefreq: "monthly", priority: "0.7" },
   { path: "/courses", changefreq: "weekly", priority: "0.9" },
+  { path: "/course-roadmap", changefreq: "monthly", priority: "0.9" },
   { path: "/n8n-course", changefreq: "monthly", priority: "0.8" },
   { path: "/ai-agents-course", changefreq: "monthly", priority: "0.8" },
   { path: "/voice-agents", changefreq: "monthly", priority: "0.8" },

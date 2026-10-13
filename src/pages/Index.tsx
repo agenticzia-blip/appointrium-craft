@@ -17,7 +17,7 @@ import {
 "@/components/ui/accordion";
 
 const courses = [
-{ icon: Zap, title: "N8N Masterclass", desc: "From beginner to advanced. Build real business automations.", path: "/n8n-course" },
+{ icon: BookOpen, title: "45-Day Client Acquisition Program", desc: "Niche, offer, AI systems, funnels, pricing, acquisition & closing.", path: "/course-roadmap" },
 { icon: Bot, title: "AI Agents Course", desc: "Solution-based AI agents for real-world businesses.", path: "/ai-agents-course" },
 { icon: Phone, title: "Voice Agents Program", desc: "Build AI receptionists, cold callers & more.", path: "/voice-agents" },
 { icon: MessageSquare, title: "WhatsApp Automation", desc: "Automate client communication at scale.", path: "/whatsapp-automation" },
@@ -54,7 +54,7 @@ const Index = () => {
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto mb-10">A complete academy to master n8n, AI agents, voice agents & how to sell them .
+            <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto mb-10">Build your AI business: choose a niche, craft a Grand Slam Offer, develop systems, build funnels, and close clients. n8n supports the systems you sell.
 
             </p>
           </ScrollReveal>

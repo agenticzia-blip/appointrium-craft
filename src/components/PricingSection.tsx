@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-import { CheckCircle, Crown } from "lucide-react";
+import { CheckCircle, Crown, ArrowRight } from "lucide-react";
 import { pricingPlans } from "@/data/pricingPlans";
 
 const PricingSection = () => (
@@ -12,8 +12,9 @@ const PricingSection = () => (
           Courses <span className="serif-italic text-gradient">Pricing.</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mb-12">
-          Limited-time — grab your spot before it's gone.
+          One client-acquisition program. Recorded learning, done-for-you support, or a full agency launch.
         </p>
+        <Button asChild variant="hero-outline" className="mb-12"><Link to="/course-roadmap">Course Contents & 45-Day Roadmap <ArrowRight className="w-4 h-4 ml-2" /></Link></Button>
       </ScrollReveal>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -54,9 +55,9 @@ const PricingSection = () => (
 
       <ScrollReveal delay={300}>
         <div className="glass-strong rounded-2xl p-8 mt-12 glow max-w-2xl mx-auto text-center">
-          <p className="text-xl font-display font-semibold mb-2">Choose the Support You Need</p>
+          <p className="text-xl font-display font-semibold mb-2">From Business Pain Points to Paying Clients</p>
           <p className="text-muted-foreground">
-            Starter is self-paced. Professional and Elite include package-specific 45-day client outcomes.
+            Starter delivers the full program in 20 recorded lectures, without a client guarantee. Professional guarantees 1 client in 45 days; Elite guarantees 2 clients in 45 days. Both include a refund guarantee if results don't come.
           </p>
         </div>
       </ScrollReveal>
