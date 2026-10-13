@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const courseLinks = [
+  { label: "45-Day Course Roadmap", path: "/course-roadmap" },
   { label: "n8n Full Course", path: "/n8n-course" },
   { label: "AI Agents", path: "/ai-agents-course" },
   { label: "Voice Agents", path: "/voice-agents" },

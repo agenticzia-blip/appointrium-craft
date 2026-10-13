@@ -14,7 +14,7 @@ const META: Record<string, Meta> = {
   "/": {
     title: "AgenticMyze — Build AI Skills and Win Clients",
     description:
-      "Master AI automation, N8N, and AI agents with plans ranging from recorded lessons to 45-day client outcomes.",
+      "Build an AI business with niche selection, Grand Slam Offers, AI systems, funnels, retention pricing, and client acquisition in a 45-day program.",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -64,7 +64,11 @@ const META: Record<string, Meta> = {
   "/courses": {
     title: "Courses — AgenticMyze",
     description:
-      "Explore every AgenticMyze course: N8N, AI Agents, Voice Agents, WhatsApp Automation and more.",
+      "Explore the AI Business & Client Acquisition Program, its 45-day roadmap, and supporting AI and n8n skills.",
+  },
+  "/course-roadmap": {
+    title: "45-Day Course Roadmap & Lecture Plan — AgenticMyze",
+    description: "Explore 20 core lectures and a full 45-day plan: onboarding, niche selection, offers, AI systems, funnels, pricing, acquisition, then appointments and closing only after day 30.",
   },
   "/n8n-course": {
     title: "N8N Masterclass — AgenticMyze",

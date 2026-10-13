@@ -1,6 +1,6 @@
 # AgenticMyze
 
-> AgenticMyze teaches AI automation, N8N workflows, AI agents, voice agents, and WhatsApp automation with package-specific client support.
+> AgenticMyze's main product is the AI Business & Client Acquisition Program: pain-point niche selection, Grand Slam Offers, AI systems, funnel building, retention pricing, acquisition systems, and closing. n8n is a supporting skill. Starter includes 20 recorded lectures without a client guarantee; Professional guarantees 1 client in 45 days; Elite guarantees 2 clients in 45 days. Professional and Elite include a refund guarantee if results do not come. All tiers include 20+ results and testimonials access.
 
 ## Pages
 
@@ -9,6 +9,7 @@
 - [Why AI](/why-ai): Why AI automation is a high-demand skill right now.
 - [What Is AI Automation](/what-is-ai-automation): Beginner-friendly intro to AI automation.
 - [Courses](/courses): Full list of available courses.
+- [45-Day Course Roadmap](/course-roadmap): 20 lectures and days 1–45, starting with onboarding. Days 31–45 contain appointments and closing only.
 - [N8N Course](/n8n-course): Master N8N workflow automation end-to-end.
 - [AI Agents Course](/ai-agents-course): Build intelligent AI agents for real business problems.
 - [Voice Agents](/voice-agents): Build AI voice agents for calls and support.

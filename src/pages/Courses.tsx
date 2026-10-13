@@ -5,6 +5,7 @@ import GlassCard from "@/components/GlassCard";
 import { Zap, Bot, Phone, MessageSquare, Target, Rocket, BookOpen, Video, Cpu, Users } from "lucide-react";
 
 const allCourses = [
+  { icon: Target, title: "AI Business & Client Acquisition Program", desc: "Your main program: niche selection, Grand Slam Offer, AI systems, funnels, retention pricing, acquisition & closing. View the 45-day roadmap.", path: "/course-roadmap" },
   { icon: Zap, title: "N8N Masterclass", desc: "Full N8N beginner to advanced. Includes self-host free method & real business automations.", path: "/n8n-course" },
   { icon: Bot, title: "AI Agents Course", desc: "Solution-based AI agents for real businesses. Build systems clients actually pay for.", path: "/ai-agents-course" },
   { icon: Phone, title: "Voice Agents Program", desc: "AI receptionists, cold callers, lead reactivation & order confirmation agents.", path: "/voice-agents" },
@@ -19,7 +20,7 @@ const allCourses = [
 
 const Courses = () => (
   <div>
-    <PageHero title="All" highlight="Courses" subtitle="Everything you need to go from zero to a thriving AI automation business." />
+    <PageHero title="Client Acquisition" highlight="Program" subtitle="One complete business-building program, with AI and n8n as supporting skills." />
     <section className="section-padding pt-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

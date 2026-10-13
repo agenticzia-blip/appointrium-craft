@@ -24,6 +24,7 @@ import Contact from "./pages/Contact";
 import LandingPage from "./pages/LandingPage";
 import StudentForm from "./pages/StudentForm";
 import Payment from "./pages/Payment";
+import CourseRoadmap from "./pages/CourseRoadmap";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/why-ai" element={<WhyAI />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/course-roadmap" element={<CourseRoadmap />} />
             <Route path="/n8n-course" element={<N8NCourse />} />
             <Route path="/ai-agents-course" element={<AIAgentsCourse />} />
             <Route path="/voice-agents" element={<VoiceAgents />} />
