@@ -5,3 +5,6 @@
 - [x] Add the pricing-to-payment WhatsApp flow
 - [x] Update SEO and sitemap content
 - [x] Verify desktop and mobile flows
+- [ ] Reposition packages around the client acquisition program, retaining n8n as a supporting skill
+- [ ] Add detailed course contents and a day-by-day 45-day roadmap; days 31–45 cover appointments and closing only
+- [ ] Verify updated package rules and course page
