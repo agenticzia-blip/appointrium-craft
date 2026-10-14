@@ -5,18 +5,15 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const courseLinks = [
-  { label: "45-Day Course Roadmap", path: "/course-roadmap" },
-  { label: "n8n Full Course", path: "/n8n-course" },
-  { label: "AI Agents", path: "/ai-agents-course" },
-  { label: "Voice Agents", path: "/voice-agents" },
-  { label: "WhatsApp Automation", path: "/whatsapp-automation" },
-  { label: "Live Classes", path: "/live-classes" },
-  { label: "Solution-Based Agents", path: "/solution-agents" },
+  { label: "Starter", path: "/courses#starter" },
+  { label: "Professional", path: "/courses#professional" },
+  { label: "Elite", path: "/courses#elite" },
 ];
 
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Courses", path: "/courses", dropdown: true },
+  { label: "Roadmap", path: "/course-roadmap" },
   { label: "Results", path: "/results" },
   { label: "Pricing", path: "/pricing" },
   { label: "Privacy Policy", path: "/privacy-policy" },
@@ -59,7 +56,7 @@ const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
 
         {/* Desktop */}
         {!minimal && (
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-5">
             {navLinks.map((l) =>
               l.dropdown ? (
                 <div key={l.path} className="relative" ref={dropdownRef}>
@@ -117,11 +114,11 @@ const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
 
         {/* Mobile toggle */}
         {!minimal ? (
-          <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+          <button className="xl:hidden text-foreground" onClick={() => setOpen(!open)}>
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         ) : (
-          <button className="md:hidden text-foreground cursor-default" aria-hidden="true">
+          <button className="xl:hidden text-foreground cursor-default" aria-hidden="true">
             <Menu size={24} />
           </button>
         )}
@@ -129,7 +126,7 @@ const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border animate-fade-in">
+        <div className="xl:hidden bg-background border-t border-border animate-fade-in">
           <div className="flex flex-col p-6 gap-4">
             {navLinks.map((l) =>
               l.dropdown ? (

@@ -6,23 +6,23 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "appointfunnels@gmail.com",
+    value: "agenticmyze@gmail.com",
     sub: undefined,
-    href: "mailto:appointfunnels@gmail.com",
+    href: "mailto:agenticmyze@gmail.com",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "+92 330 3120032",
+    value: "03078462895",
     sub: "Fastest response",
-    href: "https://wa.me/923303120032",
+    href: "https://wa.me/923078462895",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+92 330 3120032",
+    value: "03078462895",
     sub: undefined,
-    href: "tel:+923303120032",
+    href: "tel:+923078462895",
   },
 ];
 
@@ -86,8 +86,8 @@ const Contact = () => {
       <section className="section-padding pt-8 pb-16">
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { icon: Mail, label: "Email Us", value: "appointfunnels@gmail.com" },
-            { icon: Phone, label: "Call Us", value: "+92 330 3120032" },
+            { icon: Mail, label: "Email Us", value: "agenticmyze@gmail.com" },
+            { icon: Phone, label: "Call Us", value: "03078462895" },
             { icon: MapPin, label: "Location", value: "We teach online" },
           ].map((item, i) => (
             <ScrollReveal key={item.label} delay={i * 80}>

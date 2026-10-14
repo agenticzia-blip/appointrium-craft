@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import { CheckCircle, Crown, ArrowRight } from "lucide-react";
-import { pricingPlans } from "@/data/pricingPlans";
+import { pricingPlans, getPlanFeatures } from "@/data/pricingPlans";
 
-const PricingSection = () => (
+const PricingSection = ({ courses = false }: { courses?: boolean }) => (
   <section className="section-padding text-center">
     <div className="container-narrow">
       <ScrollReveal>
          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          Courses <span className="serif-italic text-gradient">Pricing.</span>
+          {courses ? "Choose Your" : "Courses"} <span className="serif-italic text-gradient">{courses ? "Program" : "Pricing."}</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mb-12">
           One client-acquisition program. Recorded learning, done-for-you support, or a full agency launch.
@@ -38,7 +38,7 @@ const PricingSection = () => (
                 <span className="text-sm text-muted-foreground ml-2">one-time</span>
               </div>
               <div className="flex flex-col gap-3 mb-8 flex-1">
-                {plan.features.map((f, j) => (
+                {getPlanFeatures(plan).map((f, j) => (
                   <div key={j} className="flex items-start gap-2.5">
                     <CheckCircle className="w-4 h-4 shrink-0 mt-0.5 opacity-60" />
                     <span className="text-sm text-muted-foreground">{f}</span>

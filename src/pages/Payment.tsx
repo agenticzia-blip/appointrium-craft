@@ -195,7 +195,7 @@ const Payment = () => {
                     Our team will contact you within the next hour. Please attend the call; if you cannot, we will follow up on WhatsApp.
                   </p>
                   <Button asChild variant="hero" size="lg" className="w-full">
-                    <a href={`https://wa.me/923303120032?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/923078462895?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="w-4 h-4" /> Open WhatsApp & Send Receipt
                     </a>
                   </Button>

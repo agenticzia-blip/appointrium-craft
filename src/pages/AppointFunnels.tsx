@@ -18,7 +18,7 @@ const features = [
 
 const AppointFunnels = () => (
   <div>
-    <PageHero title="Appoint Funnels" highlight="System" subtitle="Complete funnel building, lead generation, and conversion systems built for AI automation agencies." />
+    <PageHero title="Appointment Funnels" highlight="System" subtitle="Complete funnel building, lead generation, and conversion systems built for AI automation agencies." />
     <section className="section-padding pt-8">
       <div className="container-narrow">
         <ScrollReveal>
