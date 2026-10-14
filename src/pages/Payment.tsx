@@ -95,7 +95,7 @@ const Payment = () => {
             <h1 className="text-3xl md:text-5xl font-display font-bold mb-4">
               Complete Your <span className="serif-italic text-gradient">Payment</span>
             </h1>
-            <p className="text-muted-foreground">Follow the steps below. Your selected package is already reserved.</p>
+            <p className="text-muted-foreground">Your selected package is shown below. Enrollment is confirmed after payment verification.</p>
           </div>
         </ScrollReveal>
 
