@@ -8,7 +8,7 @@
 - [About](/about): Who we are and how the academy works.
 - [Why AI](/why-ai): Why AI automation is a high-demand skill right now.
 - [What Is AI Automation](/what-is-ai-automation): Beginner-friendly intro to AI automation.
-- [Courses](/courses): Full list of available courses.
+- [Courses](/courses): Complete Starter, Professional, and Elite package details, including lessons, tools, support, and guarantees.
 - [45-Day Course Roadmap](/course-roadmap): 20 lectures and days 1–45, starting with onboarding. Days 31–45 contain appointments and closing only.
 - [N8N Course](/n8n-course): Master N8N workflow automation end-to-end.
 - [AI Agents Course](/ai-agents-course): Build intelligent AI agents for real business problems.

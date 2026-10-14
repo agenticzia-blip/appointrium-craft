@@ -16,6 +16,7 @@ const Footer = () => (
             {[
               { label: "Home", path: "/" },
               { label: "Courses", path: "/courses" },
+              { label: "45-Day Roadmap", path: "/course-roadmap" },
               { label: "Results", path: "/results" },
               { label: "Pricing", path: "/pricing" },
               { label: "Contact", path: "/contact" },
@@ -29,8 +30,8 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-display font-semibold text-sm mb-3 uppercase tracking-wider text-muted-foreground">Contact</h4>
-          <p className="text-sm text-muted-foreground">appointfunnels@gmail.com</p>
-          <p className="text-sm text-muted-foreground mt-1">+92 330 3120032</p>
+          <p className="text-sm text-muted-foreground">agenticmyze@gmail.com</p>
+          <p className="text-sm text-muted-foreground mt-1">03078462895</p>
         </div>
       </div>
       <div className="border-t border-border pt-6 text-center text-xs text-muted-foreground">

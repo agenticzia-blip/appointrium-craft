@@ -66,7 +66,7 @@ export const pricingPlans: PricingPlan[] = [
       "1 Client Guaranteed in 45 Days",
       "Refund Guarantee If Results Don't Come",
       "Free N8N Yearly Account",
-      "20+ AppointFunnels Results & Testimonials Access",
+      "20+ Results & Testimonials Access",
       "5+ Tool Stack Worth $400+: Apollo, Claude Code, N8N, Instantly, GoHighLevel & Retell AI",
       "Cold SMS Systems",
       "20% Revenue Share per Converted Client",
@@ -107,3 +107,11 @@ export const pricingPlans: PricingPlan[] = [
 
 export const getPricingPlan = (slug: string | null) =>
   pricingPlans.find((plan) => plan.slug === slug);
+// Expand inherited benefits so each package can be understood independently.
+export const getPlanFeatures = (plan: PricingPlan): string[] => {
+  const index = pricingPlans.findIndex((item) => item.slug === plan.slug);
+  const inherited = index > 0 ? pricingPlans[index - 1] : undefined;
+  const own = plan.features.filter((feature) => !feature.startsWith("All Starter") && !feature.startsWith("All Professional"));
+  const base = inherited ? getPlanFeatures(inherited).filter((feature) => !feature.startsWith("No ") && !feature.includes("Client Guaranteed") && !feature.includes("Clients Guaranteed")) : [];
+  return [...new Set([...base, ...own])];
+};

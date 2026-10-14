@@ -64,7 +64,7 @@ const META: Record<string, Meta> = {
   "/courses": {
     title: "Courses — AgenticMyze",
     description:
-      "Explore the AI Business & Client Acquisition Program, its 45-day roadmap, and supporting AI and n8n skills.",
+      "Compare Starter, Professional, and Elite with full course contents, tools, support, prices, and 45-day client guarantees.",
   },
   "/course-roadmap": {
     title: "45-Day Course Roadmap & Lecture Plan — AgenticMyze",

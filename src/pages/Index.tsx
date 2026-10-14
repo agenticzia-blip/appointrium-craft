@@ -8,6 +8,7 @@ import AIAgentsVsAutomationSection from "@/components/AIAgentsVsAutomationSectio
 import WhatIsRAGAgentSection from "@/components/WhatIsRAGAgentSection";
 import RAGvsSimpleChatbotSection from "@/components/RAGvsSimpleChatbotSection";
 import PricingSection from "@/components/PricingSection";
+import { coursePhases } from "@/data/courseRoadmap";
 import { BookOpen, Bot, Phone, MessageSquare, Zap, Users, Handshake, Rocket, ArrowRight } from "lucide-react";
 import {
   Accordion,
@@ -22,7 +23,7 @@ const courses = [
 { icon: Phone, title: "Voice Agents Program", desc: "Build AI receptionists, cold callers & more.", path: "/voice-agents" },
 { icon: MessageSquare, title: "WhatsApp Automation", desc: "Automate client communication at scale.", path: "/whatsapp-automation" },
 { icon: Handshake, title: "Get Your First Client", desc: "Full cold emailing engine & outreach systems.", path: "/get-first-client" },
-{ icon: Rocket, title: "Appoint Funnels System", desc: "Funnels & outreach that convert.", path: "/appoint-funnels" }];
+{ icon: Rocket, title: "Appointment Funnels System", desc: "Funnels & outreach that convert.", path: "/appoint-funnels" }];
 
 
 const faqs = [
@@ -64,7 +65,7 @@ const Index = () => {
                 <Link to="/courses">Explore Courses <ArrowRight className="w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="hero-outline" size="default" className="justify-center rounded-full h-12 w-full sm:w-auto sm:h-11 px-7 text-sm">
-                <Link to="/get-first-client">Get Your First Client</Link>
+                <Link to="/course-roadmap">45-Day Roadmap</Link>
               </Button>
             </div>
           </ScrollReveal>
@@ -105,6 +106,23 @@ const Index = () => {
 
       {/* Pricing */}
       <PricingSection />
+
+      <section className="section-padding border-y border-border">
+        <div className="container-narrow">
+          <p className="text-sm text-muted-foreground mb-3">Your 45-day journey</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">From Onboarding to <span className="serif-italic text-gradient">Closing Clients</span></h2>
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            {coursePhases.map((phase) => (
+              <li key={phase.id} className="border-t border-border pt-4">
+                <p className="text-sm text-muted-foreground mb-2">{phase.label}</p>
+                <h3 className="font-display font-semibold text-lg">{phase.title}</h3>
+              </li>
+            ))}
+          </ol>
+          <p className="text-muted-foreground mb-6">Onboarding on day 1. Learn and build through day 30. Days 31–45 focus only on appointments and closing.</p>
+          <Button asChild variant="hero-outline"><Link to="/course-roadmap">View the Full Day-by-Day Roadmap <ArrowRight className="w-4 h-4 ml-2" /></Link></Button>
+        </div>
+      </section>
 
       {/* What is AI Automation */}
       <WhatIsAIAutomationSection />
