@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { courseDays, courseLectures, coursePhases } from "@/data/courseRoadmap";
-import { pricingPlans } from "@/data/pricingPlans";
+import { pricingPlans, getPlanFeatures } from "@/data/pricingPlans";
 
 const CourseRoadmap = () => (
   <div>
@@ -72,7 +72,7 @@ const CourseRoadmap = () => (
           </Tabs>
         </div>
         <aside className="lg:col-span-2 min-w-0">
-          <div className="sticky top-24 border border-border rounded-lg p-6">
+          <div className="border border-border rounded-lg p-6">
             <h2 className="text-xl font-display font-bold mb-5">Your program, your support level</h2>
             <div className="divide-y divide-border">
               {pricingPlans.map((plan) => (
@@ -80,6 +80,12 @@ const CourseRoadmap = () => (
                   <p className="font-semibold flex flex-wrap justify-between gap-2"><span>{plan.name}</span><span className="text-muted-foreground text-sm">PKR {plan.price}</span></p>
                   <p className="text-sm text-muted-foreground mt-2">{plan.guaranteedClients === 0 ? "20 recorded lectures. Self-paced, with no client guarantee or live classes." : `${plan.guaranteedClients} ${plan.guaranteedClients === 1 ? "client" : "clients"} guaranteed in ${plan.guaranteeDays} days. Done-for-you support & live mentorship.`}</p>
                   {plan.refundGuarantee && <p className="text-sm text-muted-foreground mt-2">Refund guarantee if results don't come.</p>}
+                   <ul className="space-y-3 my-4">
+                     {getPlanFeatures(plan).map((feature) => (
+                       <li key={feature} className="flex gap-2 text-sm text-muted-foreground"><CheckCircle className="w-4 h-4 shrink-0 mt-0.5 opacity-60" /><span>{feature}</span></li>
+                     ))}
+                   </ul>
+                   <Button asChild variant="hero-outline" className="w-full"><Link to={`/payment?plan=${plan.slug}`}>Choose {plan.name} <ArrowRight className="w-4 h-4 ml-2" /></Link></Button>
                 </div>
               ))}
             </div>
