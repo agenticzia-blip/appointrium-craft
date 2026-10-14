@@ -39,7 +39,7 @@ const PrivacyPolicy = () => (
           <GlassCard hover={false} className="mb-8 border-primary/20">
             <h3 className="font-display font-bold text-lg mb-3 text-foreground">💰 Refund Policy</h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-              The Professional package includes a refund guarantee if the stated results do not come. Starter does not include a client or refund guarantee. Elite client outcomes are governed by the terms confirmed during enrollment.
+              Professional includes 1 client guaranteed in 45 days, and Elite includes 2 clients guaranteed in 45 days. Both packages include a refund guarantee if results do not come. Starter is recorded training and does not include a client or refund guarantee.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               However, if you do not receive the promised value and clients as outlined in your selected package, the remaining clients will be transferred to you without any obligations or additional charges. Our commitment is to deliver what we promise.
