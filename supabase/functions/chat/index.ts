@@ -35,9 +35,9 @@ Key info:
 - Pricing: Starter PKR 10,000 | Professional PKR 30,000 (recommended) | Elite PKR 60,000
 - Starter includes 20 recorded lectures and has no done-for-you delivery, live classes, or client guarantee. Professional includes 1 client guaranteed in 45 days; Elite includes 2 clients guaranteed in 45 days. Both guaranteed tiers include a refund guarantee if results do not come, 20% revenue share per converted client, and live mentorship. All tiers include 20+ results and testimonials access.
 - Course roadmap at /course-roadmap: onboarding on day 1, progressive learning and building through day 30, then appointments and closing only on days 31–45.
-- Courses: N8N Masterclass, AI Agents, Voice Agents, WhatsApp Automation, Get First Client, Appoint Funnels
+- Courses page shows complete Starter, Professional, and Elite package details. Supporting skills include AI agents, voice agents, WhatsApp automation, client acquisition, and appointment funnels.
 - No coding experience needed
-- Contact via the website contact page
+- Contact: agenticmyze@gmail.com or WhatsApp +923078462895, also available via the website contact page.
 
 Be friendly, concise, and helpful. If unsure, direct them to the contact page.`,
             },
