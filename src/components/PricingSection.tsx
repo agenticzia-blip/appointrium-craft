@@ -21,7 +21,8 @@ const PricingSection = ({ courses = false }: { courses?: boolean }) => (
         {pricingPlans.map((plan, i) => (
           <ScrollReveal key={plan.name} delay={i * 120}>
             <div
-              className={`glass rounded-2xl p-8 text-left relative h-full flex flex-col ${
+              id={plan.slug}
+              className={`glass rounded-lg p-6 text-left relative h-full flex flex-col scroll-mt-24 ${
                 plan.recommended ? "border border-foreground/20" : "border border-border"
               }`}
             >
