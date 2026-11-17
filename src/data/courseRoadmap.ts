@@ -8,7 +8,7 @@ export type CourseDay = {
 };
 
 export const courseLectures = [
-  "Onboarding & Your 45-Day Goals",
+  "Onboarding & Your 60-Day Goals",
   "Business Pain Points & Niche Selection",
   "Validate Your Niche & Ideal Client",
   "Build Your Grand Slam Offer",
@@ -31,7 +31,7 @@ export const courseLectures = [
 ];
 
 const preparation: [string, number | undefined, string, string][] = [
-  ["Onboarding & goals", 1, "Complete onboarding, assess your starting skills, and set your daily availability and client goal.", "Personal 45-day action plan"],
+  ["Onboarding & goals", 1, "Complete onboarding, assess your starting skills, and set your daily availability and client goal.", "Personal 60-day action plan"],
   ["Find business pain points", 2, "Compare business niches and list costly problems, missed leads, and repetitive work.", "Business pain-point shortlist"],
   ["Choose your niche", 3, "Validate demand and buying ability; choose one niche and define your ideal client.", "Validated niche and ideal client profile"],
   ["Build a Grand Slam Offer", 4, "Turn one painful problem into a clear outcome with scope, value, and delivery timeline.", "First offer draft"],
@@ -79,6 +79,27 @@ const sales: [string, "appointments" | "closing", string, string][] = [
   ["Follow up with decision-makers", "closing", "Follow up on final questions and seek a clear acceptance or decline.", "Recorded proposal decisions"],
   ["Conduct final closing calls", "closing", "Finalize commercial discussions with ready prospects and confirm commitments.", "Agreed client commitments"],
   ["Final appointments & closing", "closing", "Complete scheduled closing calls and confirm outstanding proposal decisions.", "Final sales decisions and client commitments"],
+  ["Review remaining opportunities", "appointments", "Review qualified prospects still considering your offer and confirm whether a follow-up appointment is useful.", "Prioritized follow-up calendar"],
+  ["Reconnect with interested prospects", "appointments", "Reach out to prospects who requested more time and offer a suitable appointment slot.", "Re-engaged qualified prospects"],
+  ["Present outstanding proposals", "closing", "Walk remaining decision-makers through their proposal and answer questions clearly.", "Outstanding proposals presented"],
+  ["Follow up with decision-makers", "closing", "Contact decision-makers with open proposals and confirm a clear next step.", "Documented decision dates"],
+  ["Conduct follow-up appointments", "appointments", "Hold follow-up calls with interested prospects and confirm any changes in requirements.", "Updated prospect requirements"],
+  ["Address remaining objections", "closing", "Discuss unresolved concerns honestly and confirm whether the offer remains a fit.", "Concerns addressed or opportunity closed"],
+  ["Confirm decision-maker availability", "appointments", "Check availability with qualified prospects who need another conversation before deciding.", "Updated decision-maker calendar"],
+  ["Review proposal scope on calls", "closing", "Clarify deliverables, responsibilities, and pricing with prospects reviewing a proposal.", "Aligned proposal expectations"],
+  ["Complete scheduled sales appointments", "appointments", "Run the next set of confirmed appointments and record fit and follow-up needs.", "Appointment outcomes recorded"],
+  ["Follow up on open decisions", "closing", "Send concise follow-ups to prospects with pending decisions and agree a response date.", "Clear open-deal next steps"],
+  ["Present final-fit solutions", "closing", "Present the prepared solution to qualified prospects whose needs match your offer.", "Final-fit proposals discussed"],
+  ["Confirm remaining call times", "appointments", "Confirm appointment times and attendance with interested decision-makers.", "Confirmed remaining appointments"],
+  ["Discuss final commercial terms", "closing", "Review agreed scope and commercial terms with prospects ready to decide.", "Commercial terms reviewed"],
+  ["Hold final follow-up appointments", "appointments", "Meet prospects who requested one last discussion before making a decision.", "Final follow-up outcomes recorded"],
+  ["Close or formally release open deals", "closing", "Ask for a decision on open opportunities and respectfully close out those not moving forward.", "Clear outcomes for open deals"],
+  ["Review client commitments", "closing", "Confirm the scope, timeline, and next steps for prospects who agree to become clients.", "Client commitments documented"],
+  ["Complete final scheduled appointments", "appointments", "Attend remaining qualified appointments and record next steps or a no-fit decision.", "Final appointment outcomes recorded"],
+  ["Finalize proposals and next steps", "closing", "Send any final proposal revisions requested during a sales conversation.", "Final proposals delivered"],
+  ["Close remaining qualified opportunities", "closing", "Complete closing conversations with prospects ready to make a decision.", "Final opportunity decisions recorded"],
+  ["Confirm onboarding handoffs", "closing", "For new clients, confirm agreed scope and the first implementation or onboarding step.", "Agreed client handoffs"],
+  ["Wrap up appointments and closing", "closing", "Review completed sales conversations and record confirmed clients and follow-up commitments.", "60-day sales outcomes documented"],
 ];
 
 export const courseDays: CourseDay[] = [
@@ -92,5 +113,5 @@ export const coursePhases = [
   { id: "funnel", label: "Days 13–17", title: "Funnels & pricing", start: 13, end: 17 },
   { id: "acquisition", label: "Days 18–22", title: "Client acquisition", start: 18, end: 22 },
   { id: "readiness", label: "Days 23–30", title: "Closing preparation", start: 23, end: 30 },
-  { id: "closing", label: "Days 31–45", title: "Appointments & closing", start: 31, end: 45 },
+  { id: "closing", label: "Days 31–60", title: "Appointments & closing", start: 31, end: 60 },
 ];

@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Replace the 45-day offer with a 60-day offer across package details and course schedule
+- [ ] Build Staff Reporting & Requests form and import the provided spreadsheet tasks
 - [x] Update pricing packages and guarantees
 - [x] Rebrand visible content to AgenticMyze
 - [x] Add the pricing-to-payment WhatsApp flow
