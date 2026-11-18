@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/agenticmyze-selected-logo.png.asset.json";
 
 const courseLinks = [
   { label: "Starter", path: "/courses#starter" },
@@ -50,8 +50,7 @@ const Navbar = ({ minimal = false }: { minimal?: boolean }) => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 border-b border-border">
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
         <Link to="/" className="flex items-center gap-1">
-          <img src={logo} alt="AgenticMyze" className="h-16 w-auto object-contain" />
-          <span className="font-['Poppins'] font-bold text-base text-foreground tracking-tight mt-0.5">AgenticMyze</span>
+          <img src={logo.url} alt="AgenticMyze" className="h-16 w-auto object-contain" />
         </Link>
 
         {/* Desktop */}
